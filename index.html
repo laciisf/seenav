@@ -79,7 +79,7 @@
 
             <nav class="flex-1 px-4 py-4 space-y-4 overflow-y-auto">
                 <div>
-                    <button class="w-full flex items-center justify-between p-2 text-base font-normal text-gray-800 dark:text-gray-200 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-150 group" onclick="toggleAccordion('radio-menu')">
+                    <button id="radio-menu-btn" class="w-full flex items-center justify-between p-2 text-base font-normal text-gray-800 dark:text-gray-200 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-150 group">
                         <span class="flex items-center">
                             <svg class="w-5 h-5 mr-3 text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white transition-colors" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
                             <span>Rádiózás</span>
@@ -99,17 +99,10 @@
                             <svg class="w-5 h-5 mr-3 text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white transition-colors" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 012-2h4a2 2 0 012 2v1m-4 0h4" /></svg>
                             Igazoltatás
                         </a>
-                        <a href="#" class="nav-link flex items-center justify-between p-2 text-sm text-gray-600 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 group" data-target="1110-panel">
-                            <span class="flex items-center">
-                                <svg class="w-5 h-5 mr-3 text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white transition-colors" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-                                <span>11-10 Jelentés</span>
-                            </span>
-                            <span class="text-xs font-semibold text-blue-500 dark:text-blue-400">Fejlesztés alatt</span>
-                        </a>
                     </div>
                 </div>
                 <div>
-                    <button class="w-full flex items-center justify-between p-2 text-base font-normal text-gray-800 dark:text-gray-200 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-150 group" onclick="toggleAccordion('copypaste-menu')">
+                    <button id="copypaste-menu-btn" class="w-full flex items-center justify-between p-2 text-base font-normal text-gray-800 dark:text-gray-200 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-150 group">
                         <span class="flex items-center">
                             <svg class="w-5 h-5 mr-3 text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white transition-colors" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h4M8 7a2 2 0 012-2h4a2 2 0 012 2v8a2 2 0 01-2 2h-4a2 2 0 01-2-2l-2-4h14l-2 4a2 2 0 01-2 2h-4a2 2 0 01-2-2V7z" /></svg>
                             <span>Copy-Paste</span>
@@ -124,6 +117,21 @@
                         <a href="#" class="nav-link flex items-center p-2 text-sm text-gray-600 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 group" data-target="panasztetel-panel">
                             <svg class="w-5 h-5 mr-3 text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white transition-colors" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                             Panasztétel
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <button id="changelog-menu-btn" class="w-full flex items-center justify-between p-2 text-base font-normal text-gray-800 dark:text-gray-200 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-150 group">
+                        <span class="flex items-center">
+                            <svg class="w-5 h-5 mr-3 text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white transition-colors" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16" /></svg>
+                            <span>Changelog</span>
+                        </span>
+                        <svg id="changelog-menu-icon" class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div id="changelog-menu" class="hidden mt-2 space-y-2 pl-4">
+                         <a href="#" class="nav-link flex items-center p-2 text-sm text-gray-600 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 group" data-target="changelog-panel">
+                            <svg class="w-5 h-5 mr-3 text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white transition-colors" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" /></svg>
+                            Frissítések
                         </a>
                     </div>
                 </div>
@@ -171,31 +179,37 @@
                 </div>
                 
                 <div id="szolgalat-panel" class="content-panel space-y-6">
-                    <h1 class="text-2xl font-bold text-gray-900 dark:text-white">Szolgálat</h1>
+                    <div class="flex items-baseline gap-3">
+                         <h1 class="text-2xl font-bold text-gray-900 dark:text-white">Szolgálat</h1>
+                         <p class="text-sm text-gray-500 dark:text-gray-400">Napot/Estét automatikusan változik a pontos idő szerint.</p>
+                    </div>
                     <div class="bg-white dark:bg-gray-800 p-4 rounded-lg">
                         <h3 class="font-semibold text-lg mb-2 text-gray-900 dark:text-white">Szolgálatba lépés</h3>
                         <p class="text-gray-500 dark:text-gray-400 mb-3 text-sm"><code id="duty-start-text">r {név} {rendfokozat} 10-8. Szép Napot/Estét!</code></p>
-                        <button class="copy-btn" onclick="copyDutyStart(this)">Másolás</button>
+                        <button class="copy-btn" onclick="window.copyDutyStart(this)">Másolás</button>
                     </div>
                     <div class="bg-white dark:bg-gray-800 p-4 rounded-lg">
                         <h3 class="font-semibold text-lg mb-2 text-gray-900 dark:text-white">Szolgálat leadása</h3>
                         <p class="text-gray-500 dark:text-gray-400 mb-3 text-sm"><code id="duty-end-text">r {név} {rendfokozat} 10-10. További Szép Napot/Estét.</code></p>
-                        <button class="copy-btn" onclick="copyDutyEnd(this)">Másolás</button>
+                        <button class="copy-btn" onclick="window.copyDutyEnd(this)">Másolás</button>
                     </div>
                     <div class="bg-white dark:bg-gray-800 p-4 rounded-lg">
                         <h3 class="font-semibold text-lg mb-2 text-gray-900 dark:text-white">Egységkeresés</h3>
-                        <p class="text-gray-500 dark:text-gray-400 mb-3 text-sm"><code>Van olyan egység, amelyhez tudnék csatlakozni, vagy valaki szeretne velem egy egységet alkotni?</code></p>
-                        <button class="copy-btn" onclick="copyText('Van olyan egység, amelyhez tudnék csatlakozni, vagy valaki szeretne velem egy egységet alkotni?', this)">Másolás</button>
+                        <p class="text-gray-500 dark:text-gray-400 mb-3 text-sm"><code>r Van olyan egység, amelyhez tudnék csatlakozni, vagy valaki szeretne velem egy egységet alkotni?</code></p>
+                        <button class="copy-btn" onclick="window.copyText('r Van olyan egység, amelyhez tudnék csatlakozni, vagy valaki szeretne velem egy egységet alkotni?', this)">Másolás</button>
                     </div>
                     <div class="bg-white dark:bg-gray-800 p-4 rounded-lg">
                         <h3 class="font-semibold text-lg mb-2 text-gray-900 dark:text-white">LINCOLN egység kérelem</h3>
-                        <p class="text-gray-500 dark:text-gray-400 mb-3 text-sm"><code>Válasz hiányában engedélyt szeretnék kérni LINCOLN egység alakítására. Amennyiben lesz elérhető, szabad pénzügyőr, felveszem.</code></p>
-                        <button class="copy-btn" onclick="copyText('Válasz hiányában engedélyt szeretnék kérni LINCOLN egység alakítására. Amennyiben lesz elérhető, szabad pénzügyőr, felveszem.', this)">Másolás</button>
+                        <p class="text-gray-500 dark:text-gray-400 mb-3 text-sm"><code>r Válasz hiányában engedélyt szeretnék kérni LINCOLN egység alakítására. Amennyiben lesz elérhető, szabad pénzügyőr, felveszem.</code></p>
+                        <button class="copy-btn" onclick="window.copyText('r Válasz hiányában engedélyt szeretnék kérni LINCOLN egység alakítására. Amennyiben lesz elérhető, szabad pénzügyőr, felveszem.', this)">Másolás</button>
                     </div>
                 </div>
 
                 <div id="megalakulas-panel" class="content-panel space-y-6">
-                    <h1 class="text-2xl font-bold text-gray-900 dark:text-white">Egység Megalakulása</h1>
+                    <div class="flex items-baseline gap-3">
+                        <h1 class="text-2xl font-bold text-gray-900 dark:text-white">Egység Megalakulása</h1>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Amennyiben nincs megadva első vagy második járőrtársnak név, az esetben nem írja bele a szövegbe. Ezzel a módszerrel LINCOLN egység is rádiózható.</p>
+                    </div>
                     <div class="bg-white dark:bg-gray-800 p-4 rounded-lg space-y-4">
                         <p class="text-gray-600 dark:text-gray-400 text-sm">Add meg a járőrtársak adatait (opcionális).</p>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -213,71 +227,70 @@
                             </div>
                         </div>
                         <p class="text-gray-500 dark:text-gray-400 mb-3 text-sm"><code id="formation-text">r {egységszám} megalakul. Az egységet alkotja: {név} {rendfokozat}...</code></p>
-                        <button class="copy-btn" onclick="copyFormation(this)">Megalakulás másolása</button>
+                        <button class="copy-btn" onclick="window.copyFormation(this)">Megalakulás másolása</button>
                     </div>
                 </div>
 
                 <div id="igazoltatas-panel" class="content-panel space-y-6">
-                    <h1 class="text-2xl font-bold text-gray-900 dark:text-white">Igazoltatás</h1>
+                    <div class="flex items-baseline gap-3 flex-wrap">
+                        <h1 class="text-2xl font-bold text-gray-900 dark:text-white">Igazoltatás</h1>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">A típusnál és helyszínnél a rendszer automatikusan nagybetűre javítja a szavak első betűjét. A rendszámnál az összes betűt nagyra írja át. A mezők között TAB billentyűvel tudsz ugrálni.</p>
+                    </div>
                     <div class="bg-white dark:bg-gray-800 p-6 rounded-lg">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                             <div class="space-y-4">
                                 <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Intézkedés adatai</h3>
                                 <div>
-                                    <label for="ig-car-color" class="text-sm font-medium">Jármű színe</label>
+                                    <label for="ig-car-color" class="text-sm font-medium flex items-center">
+                                        <svg class="w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 3.75A1.5 1.5 0 006 5.25v13.5a1.5 1.5 0 001.5 1.5h6a1.5 1.5 0 001.5-1.5V15a1.5 1.5 0 00-1.5-1.5h-2.25V5.25a1.5 1.5 0 00-1.5-1.5h-1.5z" /><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 5.25a1.5 1.5 0 00-1.5-1.5H7.5a1.5 1.5 0 000 3h1.5a1.5 1.5 0 001.5-1.5zm3.75 0a1.5 1.5 0 00-1.5-1.5H12a1.5 1.5 0 000 3h1.5a1.5 1.5 0 001.5-1.5z" /></svg>
+                                        Jármű színe
+                                    </label>
                                     <input type="text" id="ig-car-color" class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-800 dark:text-white rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200 mt-1">
                                 </div>
                                 <div>
-                                    <label for="ig-car-type" class="text-sm font-medium">Jármű típusa</label>
+                                    <label for="ig-car-type" class="text-sm font-medium flex items-center">
+                                        <svg class="w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.125-.504 1.125-1.125V14.25m-17.25 4.5v-1.875a3.375 3.375 0 003.375-3.375h1.5a1.125 1.125 0 011.125 1.125v-1.5a3.375 3.375 0 00-3.375-3.375H3.375m10.5 11.25L10.5 11.25" /></svg>
+                                        Jármű típusa
+                                    </label>
                                     <input type="text" id="ig-car-type" class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-800 dark:text-white rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200 mt-1">
                                 </div>
                                 <div>
-                                    <label for="ig-location" class="text-sm font-medium">Helyszín</label>
+                                    <label for="ig-location" class="text-sm font-medium flex items-center">
+                                        <svg class="w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg>
+                                        Helyszín
+                                    </label>
                                     <input type="text" id="ig-location" class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-800 dark:text-white rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200 mt-1">
                                 </div>
                                 <div>
-                                    <label for="ig-passengers" class="text-sm font-medium">Utasok száma</label>
+                                    <label for="ig-passengers" class="text-sm font-medium flex items-center">
+                                         <svg class="w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-4.663M5.125 3.375l2.281 4.563a2.625 2.625 0 005.188 0l2.28-4.563a2.625 2.625 0 00-5.188 0z" /></svg>
+                                        Utasok száma
+                                    </label>
                                     <input type="number" id="ig-passengers" class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-800 dark:text-white rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200 mt-1" min="1">
                                 </div>
                                 <div>
-                                    <label for="ig-frsz" class="text-sm font-medium">Rendszám</label>
+                                    <label for="ig-frsz" class="text-sm font-medium flex items-center">
+                                         <svg class="w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 013.75 9.375v-4.5zM3.75 14.625c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5a1.125 1.125 0 01-1.125-1.125v-4.5zM13.5 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5a1.125 1.125 0 01-1.125-1.125v-4.5zM13.5 14.625c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5a1.125 1.125 0 01-1.125-1.125v-4.5z" /></svg>
+                                        Rendszám
+                                    </label>
                                     <input type="text" id="ig-frsz" class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-800 dark:text-white rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200 mt-1">
                                 </div>
                             </div>
-                            <div class="bg-gray-200 dark:bg-gray-900/50 p-4 rounded-lg flex flex-col h-full">
-                                <h4 class="font-semibold mb-2 text-gray-900 dark:text-white">Élő előnézet</h4>
-                                <pre id="id-check-preview" class="text-gray-500 dark:text-gray-400 whitespace-pre-wrap text-sm flex-grow"></pre>
+                            <div class="bg-gray-200 dark:bg-gray-900/50 p-4 rounded-lg flex flex-col h-full space-y-4">
+                                <div>
+                                    <h4 class="font-semibold mb-2 text-gray-900 dark:text-white">Élő előnézet</h4>
+                                    <pre id="id-check-preview" class="text-gray-500 dark:text-gray-400 whitespace-pre-wrap text-sm"></pre>
+                                </div>
+                                <div class="border-t border-gray-300 dark:border-gray-700 pt-4">
+                                     <h4 class="font-semibold mb-2 text-gray-900 dark:text-white">Intézkedés vége</h4>
+                                     <pre id="id-check-end-preview" class="text-gray-500 dark:text-gray-400 whitespace-pre-wrap text-sm"></pre>
+                                </div>
                             </div>
                         </div>
                         <div class="flex flex-wrap gap-4 pt-6 border-t border-gray-300 dark:border-gray-700/50 mt-6">
-                            <button class="copy-btn" onclick="copyIdCheckStart(this)">Intézkedés másolása</button>
-                            <button class="copy-btn" onclick="copyIdCheckEnd(this)">Intézkedés vége másolása</button>
+                            <button class="copy-btn" onclick="window.copyIdCheckStart(this)">Intézkedés másolása</button>
+                            <button class="copy-btn" onclick="window.copyIdCheckEnd(this)">Intézkedés vége másolása</button>
                         </div>
-                    </div>
-                </div>
-
-                <div id="1110-panel" class="content-panel space-y-6">
-                    <h1 class="text-2xl font-bold text-gray-900 dark:text-white flex items-center gap-4">
-                        11-10 Jelentés
-                        <span class="text-sm font-semibold text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-900/50 px-2 py-1 rounded-md">Fejlesztés alatt</span>
-                    </h1>
-                     <div class="bg-white dark:bg-gray-800 p-4 rounded-lg space-y-4">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div class="space-y-2">
-                                <label for="1110-location" class="text-sm font-medium">Helyszín</label>
-                                <input type="text" id="1110-location" class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-800 dark:text-white rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200">
-                            </div>
-                            <div class="space-y-2">
-                                <label for="1110-activity" class="text-sm font-medium">Tevékenység</label>
-                                <select id="1110-activity" class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-800 dark:text-white rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200">
-                                    <option value="járőrtevékenységet">Járőrtevékenység</option>
-                                    <option value="traffipaxozást">Traffipaxozás</option>
-                                    <option value="igazoltatást">Igazoltatás</option>
-                                </select>
-                            </div>
-                        </div>
-                        <p class="text-gray-500 dark:text-gray-400 mb-3 text-sm"><code id="1110-text">r {egységszám} 10-20 : {helyszin}...</code></p>
-                        <button class="copy-btn" onclick="copy1110Report(this)">Jelentés másolása</button>
                     </div>
                 </div>
 
@@ -290,7 +303,7 @@
                         <input type="text" id="infraction-search" placeholder="Keresés a szabálysértések között..." class="w-full bg-gray-200 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-800 dark:text-white rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200">
                     </div>
                     <div id="infraction-list" class="space-y-4">
-                        </div>
+                    </div>
                 </div>
 
                 <div id="panasztetel-panel" class="content-panel">
@@ -304,12 +317,41 @@
                             </p>
                         </div>
                         <div class="flex flex-wrap gap-2">
-                            <button class="copy-btn text-xs" onclick="copyComplaintPart1(this)">1. Rész másolása</button>
-                            <button class="copy-btn text-xs" onclick="copyComplaintPart2(this)">2. Rész másolása</button>
+                            <button class="copy-btn text-xs" onclick="window.copyComplaintPart1(this)">1. Rész másolása</button>
+                            <button class="copy-btn text-xs" onclick="window.copyComplaintPart2(this)">2. Rész másolása</button>
                         </div>
                     </div>
                 </div>
-
+                
+                <div id="changelog-panel" class="content-panel space-y-6">
+                     <h1 class="text-2xl font-bold text-gray-900 dark:text-white">Changelog</h1>
+                     <div class="bg-white dark:bg-gray-800 p-6 rounded-lg text-gray-700 dark:text-gray-300 space-y-6">
+                        <div class="border-b border-gray-200 dark:border-gray-700 pb-4">
+                            <h2 class="text-lg font-semibold text-gray-900 dark:text-white">1.02-es frissítés</h2>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">2025.07.30.</p>
+                            <ul class="list-disc list-inside space-y-2 text-sm mt-2">
+                                <li>Kódstruktúra teljes átalakítása a stabilitás és a hibák javítása érdekében.</li>
+                                <li>A fülek lenyitásával kapcsolatos hiba javítva.</li>
+                                <li>Az "Intézkedés indoklása" funkció javítása.</li>
+                                <li>A "11-10 Jelentés" funkció eltávolítva.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h2 class="text-lg font-semibold text-gray-900 dark:text-white">1.01-es frissítés</h2>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">2025.07.29.</p>
+                            <ul class="list-disc list-inside space-y-2 text-sm mt-2">
+                                <li>Titkosított jelszókezelés, új jelszavak hozzáadva.</li>
+                                <li>Ha nincs megadva egységszám, akkor az egységszámot igénylő rádiózásokat nem tudod kimásolni.</li>
+                                <li>Rádiózás fülön belül, Szolgálat, Megalakulás, Igazoltatás fülekhez leírás hozzáadva.</li>
+                                <li>Igazoltatás fülnél "Intézkedés vége" szöveg előnézete hozzáadva.</li>
+                                <li>Igazoltatás fülnél ikonok hozzáadva.</li>
+                                <li>Szolgálat fülnél Egységkeresés és LINCOLN egység kérelem szöveg elé "r" hozzáadva.</li>
+                                <li>Copy-Paste fül automatikus kinyitása hozzáadva.</li>
+                                <li>Egyéb hibajavítások.</li>
+                            </ul>
+                        </div>
+                     </div>
+                </div>
             </div>
         </main>
     </div>
@@ -372,674 +414,649 @@
     </div>
 
     <script>
-        // --- DATA ---
-        const infractions = [
-            { title: "1 § Forgalom feltartása(FF)", description: "Forgalom Feltartásának minősül minden olyan cselekedet mely az úttest valamely forgalmi sávjában történő egyenletes haladást, vagy előzést indokolatlanul hátráltatja vagy megakadályozza." },
-            { title: "2 § Gondatlan vezetés(GV)", description: "Aki a közúti közlekedés szabályainak megszegésével közúton vagy közforgalom elől el nem zárt magánúton más vagy mások életét vagy testi épségét veszélynek tenné ki, viszont az adott helyzetben ez a forgalom sűrűsége vagy bármilyen egyéb ok miatt nem áll fent. Nem osztható együtt a \"Közúti veszélyeztetés\" tétellel." },
-            { title: "3 § Jogosítvány nélküli vezetés", description: "Aki járművet vezetői engedély nélkül vagy lejárt vezetői engedéllyel közúti forgalomban használ. Szintén büntetendő amennyiben a jármű vezetője rendelkezik érvényes engedéllyel azonban azt nem tudja bemutatni ellenőrzéskor. Bevont vezetői engedély esetében \"Járművezetés eltiltás alatt\" tételt kell alkalmazni." },
-            { title: "4 § Állami szervezet tulajdonának megrongálása", description: "Az a személy aki szándékosan vagy gondatlanságból állami tulajdont rongál meg." },
-            { title: "8 § Fényszóró használatának elmulasztása", description: "Fényszóró használata este 6 és reggel 6 óra valamint rossz látási viszonyok között kötelező." },
-            { title: "21 § Parkolási rendelet megsértése", description: "Aki a Parkolási Rendeletben foglaltakat megsérti. https://forum.see-game.com/threads/418927" },
-            { title: "22 § Kötelező felszerelés hiánya", description: "Kötelező felszerelések: Elsősegély doboz, Kötszer" },
-            { title: "23 § Forgalmi engedély hiánya", description: "A gépjármű nem rendelkezik érvényes forgalmi engedéllyel, vagy annak meglétét a jármű sofőre nem tudja igazolni. Gépjármű ez esetben nem tárolható főútvonalon, mellékútvonalon, közterületen kialakított parkolóban. Műszaki adatlap kiállításától 1 nap türelmi idő van a forgalmi engedély kiváltására. A gépjármű eltávolításáról a Rendőrség jogosult minden esetben a tulajdonos költségére." },
-            { title: "24 § Lejárt forgalmi engedély", description: "A gépjármű rendelkezik forgalmi engedéllyel azonban az érvényességi ideje lejárt. Gépjármű ez esetben nem tárolható főútvonalon, mellékútvonalon, közterületen kialakított parkolóban. A gépjármű eltávolításáról a Rendőrség jogosult minden esetben a tulajdonos költségére." },
-            { title: "25 § Érvénytelen forgalmi engedély", description: "A gépjármű rendelkezik forgalmi engedéllyel, azonban az abban leírt dolgok immáron nem aktuálisak. Például más a kocsi színe, Tulajdonos váltás, Tuning változtatás stb. Amennyiben csak tulajdonos váltás történt és az összes többi adat megfelelő úgy a türelmi idő 3 nap. Gépjármű ez esetben nem tárolható főútvonalon, mellékútvonalon, közterületen kialakított parkolóban." },
-            { title: "26 § Rongált járművel való közlekedés", description: "Aki járművét sérült karosszéria elemekkel használja. (Lökhárítók, Ajtók, Csomagtartó, Motorháztető Lámpák) Az alap bírságon felül elemenként 1000$." },
-            { title: "27 § Nem megfelelő műszaki állapotú jármű használata", description: "Aki nem megfelelő műszaki állapotú járművet használ. (Műszaki vizsgán nem felelne meg a jármű valamilyen hiba okán)" },
-            { title: "28 § KRESZ Szabálypont megsértése", description: "Minden olyan egyéb a KPM-BM rendelet alapján hatályos szabály melyre ez a törvény nem tér ki." },
-            { title: "29.1 § Színes fényszóró", description: "Kizárólag a műszaki vizsga előírásaiban engedélyezett fényszóró szerelhető fel." },
-            { title: "29.2 § Neon", description: "Tilos a járműre szerelt neoncsövet közúti közlekedésben vagy közforgalom elől el nem zárt magánúton menet közben használni. Kivétel: Rendőrségi vezérkar engedélye esetén kiemelt események helyszínén és útvonalán." },
-            { title: "29.3 § Nitro", description: "SeeRingen belül használható" },
-            { title: "37 § Csendháborítás", description: "Lakossági panasz esetén este 22 óra és reggel 8 óra között." },
-            { title: "38 § Közrend megzavarása", description: "Aki közterületen az alapvető viselkedési normákat nem tartja be, vagy koldul. Nem osztható együtt a \"Garázdaság\" tétellel." },
-            { title: "39 § Közterületen történő alkoholfogyasztás", description: "Aki közterületen alkoholos italt fogyaszt." },
-            { title: "40 § Dohányzás tiltott területen", description: "Tilos a dohányzás minden közintézményben valamint azok területén, buszmegállóban továbbá ahol tilalmat jelző tábla került kihelyezésre" },
-            { title: "41 § Rendőrrel szembeni tiszteletlenség", description: "Aki rendőrt, katonát egyéb hivatalos személyt sérteget." },
-            { title: "42 § Közvagyon megrongálása", description: "Aki oszlopot, póznát, buszmegállót rongál meg. Minden más tárgy esetében a \"Rongálás\" tételt kell alkalmazni." },
-            { title: "45 § Diszkrimináció", description: "Aki mást faji, vallási, szexuális, vagy bármilyen más hovatartozása miatt hátrányosan kezel." },
-            { title: "46 § Állami szerv indokolatlan hívása", description: "Aki állami szervezetet indokolatlanul hív ki egy helyszínre, vagy aki az indokolatlanná válást követően hívását nem mondja le. Az illetkékes hatóság kiszabhatja az alap büntetésen felül a kiszállási díjat, mely: - Rendvédelmi egységenként: 2.500$ - Mentőegységenként: 2.000$ - Katasztrófavédelmi egységenként: 2.000$ - Terrorelhárítási / Honvédelmi szerv értesítése esetén: 30.000$" },
-            { title: "47 § Megengedettnél több fegyver tartása", description: "Aki fegyvereit engedéllyel és azokat bejelentve tartja, azonban egy adott típusból (lőfegyver/kézifegyver) 1 darabnál több van nála egy időben. A limit alól mentesül az aki a bejelentési procedúra végett annak idejére tart magánál többet." },
-            { title: "48 § Megengedettnél több töltény tartása", description: "Aki a fegyveréhez tartozó töltényt engedéllyel tartja, azonban 45 darabnál több van nála egy időben." },
-            { title: "49 § Közúti baleset okozása", description: "Aki a közúti közlekedési szabályainak megsértésével másnak vagy másoknak gondatlanságból kárt okoz. Az intézkedő személy saját belátása szerint dönthet a járművezetői engedély bevonásáról." },
-            { title: "52 § Járművezetés eltiltás alatt", description: "Akinek a hatóság korábban bevonta a járművezetői engedélyét, nem tett újra vizsgát és közúti járművet vezet." },
-            { title: "54 § Szeméremsértés", description: "Aki magát nemi vágyának felkeltése vagy kielégítése céljából más előtt szeméremsértő módon mutogatja." },
-            { title: "55 § Hatóság félrevezetése", description: "Aki szándékosan valótlant állít a hatóság irányába. Az illetkes hatóság kiszabhatja az alap büntetésen felül a kiszállási díjat, mely: - Egységenként: 2.500$ - Terrorelhárítási / Honvédelmi szerv értesítése esetén: 30.000$" },
-            { title: "56 § Rendőr előli menekülés", description: "Aki a hatóság utasításának ellenére nem áll meg, vagy jogszerű intézkedés alól próbálja kivonni magát." },
-            { title: "57 § Rendőri utasítás megszegése", description: "Aki közúti közlekedés során az 1. felszólítást követően vagy intézkedés / területbiztosítás esetében a 2. felszólítást követően sem tesz eleget a hatóság utasításának. Területbiztosítás során nem szólítható fel az aki nem lépett lezárt területre." },
-            { title: "62 § Magánlaksértés", description: "Aki más lakásába, egyéb helyiségébe vagy ezekhez tartozó bekerített helyre jogosulatlanul bemegy, illetve ott bent marad." },
-            { title: "67 § Zaklatás", description: "Aki abból a célból, hogy mást megfélemlítsen, vagy más magánéletébe, illetve mindennapi életvitelébe önkényesen zavaróan beavatkozon." },
-            { title: "72 § Segítségnyújtás elmulasztása", description: "Aki nem nyújt tőle elvárható segítséget sérült vagy olyan személynek, akinek az élete vagy testi épsége közvetlen veszélyben van." },
-            { title: "74 § Rongálás", description: "Aki idegen vagyontárgy megsemmisítésével vagy megrongálásával kárt okoz, és a kárt nem hajlandó / tudja megtéríteni." },
-            { title: "79 § Cserbenhagyás", description: "Ha a közlekedési balesettel érintett jármű vezetője a helyszínen nem áll meg, illetve onnan eltávozik, mielőtt meggyőződne arról, hogy valaki megsérült-e, illetve az életét vagy testi épségét közvetlenül fenyegető veszély miatt segítségnyújtásra szorul-e." },
-            { title: "80 § Közúti veszélyeztetés", description: "Aki a közúti közlekedés szabályainak megszegésével közúton vagy közforgalom elől el nem zárt magánúton más vagy mások életét vagy testi épségét közvetlen veszélynek teszi ki. Illetve aki a közutat vagy a közúti jelzést megrongálja, beszennyezi vagy a közútra a közlekedés biztonságát, zavartalanságát hátrányosan befolyásoló tárgyat juttat." }
-        ];
+        document.addEventListener('DOMContentLoaded', () => {
+            const dataTokens = [
+                "c2VzZW5hdmdlZDIwMjVuYXY=", "b3JiaTIwMDg=", "aGFyYXJpY3Np", 
+                "a29sYTE5Mg==", "bmF0ZQ==", "bmF0ZWRldg=="
+            ];
 
-        // --- STATE MANAGEMENT ---
-        let state = {
-            userName: '',
-            userRank: '',
-            userBadge: '',
-            unitNumber: 'N/A'
-        };
+            function verifyAccess(input) {
+                try {
+                    return dataTokens.includes(btoa(input));
+                } catch (e) { return false; }
+            }
 
-        const ranks = [
-            "Tanuló", "Hallgató", "Őrmester", "Törzsőrmester", "Főtörzsőrmester", 
-            "Zászlós", "Törzszászlós", "Főtörzszászlós", "Hadnagy"
-        ];
+            const passwordModal = document.getElementById('password-modal');
+            const passwordInput = document.getElementById('entry-key-input');
+            const passwordSubmit = document.getElementById('entry-submit');
+            const passwordError = document.getElementById('entry-error');
+            const appContainer = document.getElementById('app');
+            const loginModal = document.getElementById('login-modal');
 
-        // --- DOM ELEMENT REFERENCES ---
-        const dom = {
-            app: document.getElementById('app'),
-            displayName: document.getElementById('display-name'),
-            displayRank: document.getElementById('display-rank'),
-            displayBadge: document.getElementById('display-badge'),
-            passwordModal: document.getElementById('password-modal'),
-            passwordInput: document.getElementById('entry-key-input'),
-            passwordSubmit: document.getElementById('entry-submit'),
-            passwordError: document.getElementById('entry-error'),
-            togglePassword: document.getElementById('toggle-visibility'),
-            eyeOpen: document.getElementById('eye-open'),
-            eyeClosed: document.getElementById('eye-closed'),
-            loginModal: document.getElementById('login-modal'),
-            loginButton: document.getElementById('login-button'),
-            loginStatusContainer: document.getElementById('login-status-container'),
-            logoutButton: document.getElementById('logout-button'),
-            loginSubmit: document.getElementById('login-submit'),
-            loginError: document.getElementById('login-error'),
-            userNameInput: document.getElementById('user-name'),
-            userRankInput: document.getElementById('user-rank'),
-            userBadgeInput: document.getElementById('user-badge'),
-            unitModal: document.getElementById('unit-modal'),
-            unitButton: document.getElementById('unit-button'),
-            unitWarning: document.getElementById('unit-warning'),
-            unitSubmit: document.getElementById('unit-submit'),
-            unitNumberInput: document.getElementById('unit-number'),
-            unitError: document.getElementById('unit-error'),
-            navLinks: document.querySelectorAll('.nav-link'),
-            contentPanels: document.querySelectorAll('.content-panel'),
-            rankSelects: document.querySelectorAll('.rank-select'),
-            notificationToast: document.getElementById('notification-toast'),
-            notificationMessage: document.getElementById('notification-message'),
-            idCheck: {
-                color: document.getElementById('ig-car-color'),
-                type: document.getElementById('ig-car-type'),
-                location: document.getElementById('ig-location'),
-                passengers: document.getElementById('ig-passengers'),
-                frsz: document.getElementById('ig-frsz'),
-                preview: document.getElementById('id-check-preview')
-            },
-            infractionSearch: document.getElementById('infraction-search'),
-            infractionList: document.getElementById('infraction-list'),
-            complaintPart2Preview: document.getElementById('complaint-part2-preview'),
-            // Placeholder text elements
-            dutyStartText: document.getElementById('duty-start-text'),
-            dutyEndText: document.getElementById('duty-end-text'),
-            formationText: document.getElementById('formation-text'),
-            idCheckPreview: document.getElementById('id-check-preview'),
-            report1110Text: document.getElementById('1110-text'),
-            themeLightBtn: document.getElementById('theme-light-btn'),
-            themeDarkBtn: document.getElementById('theme-dark-btn'),
-        };
+            function handleAuthAttempt() {
+                if (verifyAccess(passwordInput.value)) {
+                    passwordModal.classList.add('hidden');
+                    document.getElementById('background-canvas').style.opacity = '0.1';
+                    appContainer.classList.remove('hidden');
+                    loginModal.classList.remove('hidden');
+                    initializeAppLogic();
+                } else {
+                    passwordError.textContent = "Helytelen belépési kód!";
+                    passwordInput.value = '';
+                }
+            }
+            
+            passwordSubmit.addEventListener('click', handleAuthAttempt);
+            passwordInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    handleAuthAttempt();
+                }
+            });
+            
+            document.getElementById('toggle-visibility').addEventListener('click', function() {
+                const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                passwordInput.setAttribute('type', type);
+                document.getElementById('eye-open').classList.toggle('hidden');
+                document.getElementById('eye-closed').classList.toggle('hidden');
+            });
 
-        let notificationTimeout;
+            const canvas = document.getElementById('background-canvas');
+            const ctx = canvas.getContext('2d');
+            let shapes = [];
 
-        // --- INITIALIZATION ---
-        function appInit() {
+            function resizeCanvas() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+
+            function createShapes() {
+                const shapeCount = 25;
+                shapes = [];
+                for (let i = 0; i < shapeCount; i++) {
+                    shapes.push({
+                        x: Math.random() * canvas.width,
+                        y: Math.random() * canvas.height,
+                        size: Math.random() * 50 + 25,
+                        sides: Math.floor(Math.random() * 3) + 3,
+                        angle: Math.random() * Math.PI * 2,
+                        speed: Math.random() * 0.4 + 0.1,
+                        rotationSpeed: (Math.random() - 0.5) * 0.01,
+                    });
+                }
+            }
+
+            function animate() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                const isDarkMode = document.documentElement.classList.contains('dark');
+                shapes.forEach(shape => {
+                    shape.y -= shape.speed;
+                    shape.angle += shape.rotationSpeed;
+                    if (shape.y < -shape.size) {
+                        shape.y = canvas.height + shape.size;
+                        shape.x = Math.random() * canvas.width;
+                    }
+                    shape.color = isDarkMode 
+                        ? `rgba(110, 128, 152, 0.25)`
+                        : `rgba(147, 197, 253, 0.4)`;
+                    drawShape(shape);
+                });
+                requestAnimationFrame(animate);
+            }
+
+            function drawShape(shape) {
+                ctx.save();
+                ctx.translate(shape.x, shape.y);
+                ctx.rotate(shape.angle);
+                ctx.beginPath();
+                for (let i = 0; i < shape.sides; i++) {
+                    const angle = (i / shape.sides) * Math.PI * 2;
+                    const x = shape.size * Math.cos(angle);
+                    const y = shape.size * Math.sin(angle);
+                    if (i === 0) { ctx.moveTo(x, y); } else { ctx.lineTo(x, y); }
+                }
+                ctx.closePath();
+                ctx.strokeStyle = shape.color;
+                ctx.lineWidth = 2;
+                ctx.stroke();
+                ctx.restore();
+            }
+
+            window.addEventListener('resize', () => {
+                resizeCanvas();
+                createShapes();
+            });
+
+            resizeCanvas();
+            createShapes();
+            animate();
+        });
+
+        let appInitialized = false;
+
+        function initializeAppLogic() {
+            if (appInitialized) return;
+            appInitialized = true;
+
+            const infractions = [
+                { title: "1 § Forgalom feltartása(FF)", description: "Forgalom Feltartásának minősül minden olyan cselekedet mely az úttest valamely forgalmi sávjában történő egyenletes haladást, vagy előzést indokolatlanul hátráltatja vagy megakadályozza." },
+                { title: "2 § Gondatlan vezetés(GV)", description: "Aki a közúti közlekedés szabályainak megszegésével közúton vagy közforgalom elől el nem zárt magánúton más vagy mások életét vagy testi épségét veszélynek tenné ki, viszont az adott helyzetben ez a forgalom sűrűsége vagy bármilyen egyéb ok miatt nem áll fent. Nem osztható együtt a \"Közúti veszélyeztetés\" tétellel." },
+                { title: "3 § Jogosítvány nélküli vezetés", description: "Aki járművet vezetői engedély nélkül vagy lejárt vezetői engedéllyel közúti forgalomban használ. Szintén büntetendő amennyiben a jármű vezetője rendelkezik érvényes engedéllyel azonban azt nem tudja bemutatni ellenőrzéskor. Bevont vezetői engedély esetében \"Járművezetés eltiltás alatt\" tételt kell alkalmazni." },
+                { title: "4 § Állami szervezet tulajdonának megrongálása", description: "Az a személy aki szándékosan vagy gondatlanságból állami tulajdont rongál meg." },
+                { title: "8 § Fényszóró használatának elmulasztása", description: "Fényszóró használata este 6 és reggel 6 óra valamint rossz látási viszonyok között kötelező." },
+                { title: "21 § Parkolási rendelet megsértése", description: "Aki a Parkolási Rendeletben foglaltakat megsérti. https://forum.see-game.com/threads/418927" },
+                { title: "22 § Kötelező felszerelés hiánya", description: "Kötelező felszerelések: Elsősegély doboz, Kötszer" },
+                { title: "23 § Forgalmi engedély hiánya", description: "A gépjármű nem rendelkezik érvényes forgalmi engedéllyel, vagy annak meglétét a jármű sofőre nem tudja igazolni. Gépjármű ez esetben nem tárolható főútvonalon, mellékútvonalon, közterületen kialakított parkolóban. Műszaki adatlap kiállításától 1 nap türelmi idő van a forgalmi engedély kiváltására. A gépjármű eltávolításáról a Rendőrség jogosult minden esetben a tulajdonos költségére." },
+                { title: "24 § Lejárt forgalmi engedély", description: "A gépjármű rendelkezik forgalmi engedéllyel azonban az érvényességi ideje lejárt. Gépjármű ez esetben nem tárolható főútvonalon, mellékútvonalon, közterületen kialakított parkolóban. A gépjármű eltávolításáról a Rendőrség jogosult minden esetben a tulajdonos költségére." },
+                { title: "25 § Érvénytelen forgalmi engedély", description: "A gépjármű rendelkezik forgalmi engedéllyel, azonban az abban leírt dolgok immáron nem aktuálisak. Például más a kocsi színe, Tulajdonos váltás, Tuning változtatás stb. Amennyiben csak tulajdonos váltás történt és az összes többi adat megfelelő úgy a türelmi idő 3 nap. Gépjármű ez esetben nem tárolható főútvonalon, mellékútvonalon, közterületen kialakított parkolóban." },
+                { title: "26 § Rongált járművel való közlekedés", description: "Aki járművét sérült karosszéria elemekkel használja. (Lökhárítók, Ajtók, Csomagtartó, Motorháztető Lámpák) Az alap bírságon felül elemenként 1000$." },
+                { title: "27 § Nem megfelelő műszaki állapotú jármű használata", description: "Aki nem megfelelő műszaki állapotú járművet használ. (Műszaki vizsgán nem felelne meg a jármű valamilyen hiba okán)" },
+                { title: "28 § KRESZ Szabálypont megsértése", description: "Minden olyan egyéb a KPM-BM rendelet alapján hatályos szabály melyre ez a törvény nem tér ki." },
+                { title: "29.1 § Színes fényszóró", description: "Kizárólag a műszaki vizsga előírásaiban engedélyezett fényszóró szerelhető fel." },
+                { title: "29.2 § Neon", description: "Tilos a járműre szerelt neoncsövet közúti közlekedésben vagy közforgalom elől el nem zárt magánúton menet közben használni. Kivétel: Rendőrségi vezérkar engedélye esetén kiemelt események helyszínén és útvonalán." },
+                { title: "29.3 § Nitro", description: "SeeRingen belül használható" },
+                { title: "37 § Csendháborítás", description: "Lakossági panasz esetén este 22 óra és reggel 8 óra között." },
+                { title: "38 § Közrend megzavarása", description: "Aki közterületen az alapvető viselkedési normákat nem tartja be, vagy koldul. Nem osztható együtt a \"Garázdaság\" tétellel." },
+                { title: "39 § Közterületen történő alkoholfogyasztás", description: "Aki közterületen alkoholos italt fogyaszt." },
+                { title: "40 § Dohányzás tiltott területen", description: "Tilos a dohányzás minden közintézményben valamint azok területén, buszmegállóban továbbá ahol tilalmat jelző tábla került kihelyezésre" },
+                { title: "41 § Rendőrrel szembeni tiszteletlenség", description: "Aki rendőrt, katonát egyéb hivatalos személyt sérteget." },
+                { title: "42 § Közvagyon megrongálása", description: "Aki oszlopot, póznát, buszmegállót rongál meg. Minden más tárgy esetében a \"Rongálás\" tételt kell alkalmazni." },
+                { title: "45 § Diszkrimináció", description: "Aki mást faji, vallási, szexuális, vagy bármilyen más hovatartozása miatt hátrányosan kezel." },
+                { title: "46 § Állami szerv indokolatlan hívása", description: "Aki állami szervezetet indokolatlanul hív ki egy helyszínre, vagy aki az indokolatlanná válást követően hívását nem mondja le. Az illetkékes hatóság kiszabhatja az alap büntetésen felül a kiszállási díjat, mely: - Rendvédelmi egységenként: 2.500$ - Mentőegységenként: 2.000$ - Katasztrófavédelmi egységenként: 2.000$ - Terrorelhárítási / Honvédelmi szerv értesítése esetén: 30.000$" },
+                { title: "47 § Megengedettnél több fegyver tartása", description: "Aki fegyvereit engedéllyel és azokat bejelentve tartja, azonban egy adott típusból (lőfegyver/kézifegyver) 1 darabnál több van nála egy időben. A limit alól mentesül az aki a bejelentési procedúra végett annak idejére tart magánál többet." },
+                { title: "48 § Megengedettnél több töltény tartása", description: "Aki a fegyveréhez tartozó töltényt engedéllyel tartja, azonban 45 darabnál több van nála egy időben." },
+                { title: "49 § Közúti baleset okozása", description: "Aki a közúti közlekedési szabályainak megsértésével másnak vagy másoknak gondatlanságból kárt okoz. Az intézkedő személy saját belátása szerint dönthet a járművezetői engedély bevonásáról." },
+                { title: "52 § Járművezetés eltiltás alatt", description: "Akinek a hatóság korábban bevonta a járművezetői engedélyét, nem tett újra vizsgát és közúti járművet vezet." },
+                { title: "54 § Szeméremsértés", description: "Aki magát nemi vágyának felkeltése vagy kielégítése céljából más előtt szeméremsértő módon mutogatja." },
+                { title: "55 § Hatóság félrevezetése", description: "Aki szándékosan valótlant állít a hatóság irányába. Az illetkes hatóság kiszabhatja az alap büntetésen felül a kiszállási díjat, mely: - Egységenként: 2.500$ - Terrorelhárítási / Honvédelmi szerv értesítése esetén: 30.000$" },
+                { title: "56 § Rendőr előli menekülés", description: "Aki a hatóság utasításának ellenére nem áll meg, vagy jogszerű intézkedés alól próbálja kivonni magát." },
+                { title: "57 § Rendőri utasítás megszegése", description: "Aki közúti közlekedés során az 1. felszólítást követően vagy intézkedés / területbiztosítás esetében a 2. felszólítást követően sem tesz eleget a hatóság utasításának. Területbiztosítás során nem szólítható fel az aki nem lépett lezárt területre." },
+                { title: "62 § Magánlaksértés", description: "Aki más lakásába, egyéb helyiségébe vagy ezekhez tartozó bekerített helyre jogosulatlanul bemegy, illetve ott bent marad." },
+                { title: "67 § Zaklatás", description: "Aki abból a célból, hogy mást megfélemlítsen, vagy más magánéletébe, illetve mindennapi életvitelébe önkényesen zavaróan beavatkozon." },
+                { title: "72 § Segítségnyújtás elmulasztása", description: "Aki nem nyújt tőle elvárható segítséget sérült vagy olyan személynek, akinek az élete vagy testi épsége közvetlen veszélyben van." },
+                { title: "74 § Rongálás", description: "Aki idegen vagyontárgy megsemmisítésével vagy megrongálásával kárt okoz, és a kárt nem hajlandó / tudja megtéríteni." },
+                { title: "79 § Cserbenhagyás", description: "Ha a közlekedési balesettel érintett jármű vezetője a helyszínen nem áll meg, illetve onnan eltávozik, mielőtt meggyőződne arról, hogy valaki megsérült-e, illetve az életét vagy testi épségét közvetlenül fenyegető veszély miatt segítségnyújtásra szorul-e." },
+                { title: "80 § Közúti veszélyeztetés", description: "Aki a közúti közlekedés szabályainak megszegésével közúton vagy közforgalom elől el nem zárt magánúton más vagy mások életét vagy testi épségét közvetlen veszélynek teszi ki. Illetve aki a közutat vagy a közúti jelzést megrongálja, beszennyezi vagy a közútra a közlekedés biztonságát, zavartalanságát hátrányosan befolyásoló tárgyat juttat." }
+            ];
+
+            let state = {
+                userName: '',
+                userRank: '',
+                userBadge: '',
+                unitNumber: 'N/A'
+            };
+
+            const ranks = [
+                "Tanuló", "Hallgató", "Őrmester", "Törzsőrmester", "Főtörzsőrmester", 
+                "Zászlós", "Törzszászlós", "Főtörzszászlós", "Hadnagy"
+            ];
+
+            const dom = {
+                app: document.getElementById('app'),
+                displayName: document.getElementById('display-name'),
+                displayRank: document.getElementById('display-rank'),
+                displayBadge: document.getElementById('display-badge'),
+                loginModal: document.getElementById('login-modal'),
+                loginButton: document.getElementById('login-button'),
+                loginStatusContainer: document.getElementById('login-status-container'),
+                logoutButton: document.getElementById('logout-button'),
+                loginSubmit: document.getElementById('login-submit'),
+                loginError: document.getElementById('login-error'),
+                userNameInput: document.getElementById('user-name'),
+                userRankInput: document.getElementById('user-rank'),
+                userBadgeInput: document.getElementById('user-badge'),
+                unitModal: document.getElementById('unit-modal'),
+                unitButton: document.getElementById('unit-button'),
+                unitWarning: document.getElementById('unit-warning'),
+                unitSubmit: document.getElementById('unit-submit'),
+                unitNumberInput: document.getElementById('unit-number'),
+                unitError: document.getElementById('unit-error'),
+                navLinks: document.querySelectorAll('.nav-link'),
+                contentPanels: document.querySelectorAll('.content-panel'),
+                rankSelects: document.querySelectorAll('.rank-select'),
+                notificationToast: document.getElementById('notification-toast'),
+                notificationMessage: document.getElementById('notification-message'),
+                idCheck: {
+                    color: document.getElementById('ig-car-color'),
+                    type: document.getElementById('ig-car-type'),
+                    location: document.getElementById('ig-location'),
+                    passengers: document.getElementById('ig-passengers'),
+                    frsz: document.getElementById('ig-frsz'),
+                    preview: document.getElementById('id-check-preview')
+                },
+                infractionSearch: document.getElementById('infraction-search'),
+                infractionList: document.getElementById('infraction-list'),
+                complaintPart2Preview: document.getElementById('complaint-part2-preview'),
+                dutyStartText: document.getElementById('duty-start-text'),
+                dutyEndText: document.getElementById('duty-end-text'),
+                formationText: document.getElementById('formation-text'),
+                idCheckPreview: document.getElementById('id-check-preview'),
+                idCheckEndPreview: document.getElementById('id-check-end-preview'),
+                themeLightBtn: document.getElementById('theme-light-btn'),
+                themeDarkBtn: document.getElementById('theme-dark-btn'),
+                accordionButtons: {
+                    radio: document.getElementById('radio-menu-btn'),
+                    copypaste: document.getElementById('copypaste-menu-btn'),
+                    changelog: document.getElementById('changelog-menu-btn')
+                }
+            };
+
+            let notificationTimeout;
+            
+            function populateRankDropdowns() {
+                dom.rankSelects.forEach(select => {
+                    select.innerHTML = '<option value="" disabled selected>Válassz...</option>';
+                    ranks.forEach(rank => {
+                        const option = document.createElement('option');
+                        option.value = rank;
+                        option.textContent = rank;
+                        select.appendChild(option);
+                    });
+                });
+            }
+
+            function addEventListeners() {
+                dom.loginSubmit.addEventListener('click', handleLogin);
+                dom.loginButton.addEventListener('click', () => dom.loginModal.classList.remove('hidden'));
+                dom.logoutButton.addEventListener('click', handleLogout);
+                dom.unitButton.addEventListener('click', () => dom.unitModal.classList.remove('hidden'));
+                dom.unitSubmit.addEventListener('click', handleUnitSet);
+                
+                Object.values(dom.accordionButtons).forEach(button => {
+                    if (button) {
+                        button.addEventListener('click', () => toggleAccordion(button.id.replace('-btn', '')));
+                    }
+                });
+                
+                dom.navLinks.forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const targetId = link.getAttribute('data-target');
+                        showPanel(targetId);
+                    });
+                });
+
+                Object.values(dom.idCheck).forEach(input => {
+                    if (input && (input.tagName === 'INPUT' || input.tagName === 'SELECT')) {
+                        input.addEventListener('input', updateAllPlaceholderTexts);
+                    }
+                });
+                
+                document.getElementById('partner1-name').addEventListener('input', updateAllPlaceholderTexts);
+                document.getElementById('partner1-rank').addEventListener('input', updateAllPlaceholderTexts);
+                document.getElementById('partner2-name').addEventListener('input', updateAllPlaceholderTexts);
+                document.getElementById('partner2-rank').addEventListener('input', updateAllPlaceholderTexts);
+
+                const capitalizeWords = (e) => {
+                    const value = e.target.value;
+                    e.target.value = value.split(' ').map(word => 
+                        word.charAt(0).toUpperCase() + word.slice(1)
+                    ).join(' ');
+                };
+
+                const capitalizeFirstLetter = (e) => {
+                     const value = e.target.value;
+                     if (value.length > 0) {
+                        e.target.value = value.charAt(0).toUpperCase() + value.slice(1);
+                     }
+                };
+                
+                dom.userNameInput.addEventListener('input', capitalizeFirstLetter);
+                
+                dom.idCheck.type.addEventListener('input', capitalizeWords);
+                dom.idCheck.location.addEventListener('input', capitalizeWords);
+
+                dom.idCheck.frsz.addEventListener('input', (e) => {
+                    e.target.value = e.target.value.toUpperCase();
+                    setTimeout(updateAllPlaceholderTexts, 0);
+                });
+
+                dom.infractionSearch.addEventListener('input', () => renderInfractions());
+
+                dom.themeLightBtn.addEventListener('click', () => setTheme('light'));
+                dom.themeDarkBtn.addEventListener('click', () => setTheme('dark'));
+            }
+
+            function updateUnitButtonState() {
+                const button = dom.unitButton;
+                const warning = dom.unitWarning;
+                if (state.unitNumber === 'N/A') {
+                    button.textContent = 'Egységszám';
+                    button.classList.remove('bg-indigo-600', 'hover:bg-indigo-700', 'focus:ring-indigo-500', 'text-white');
+                    button.classList.add('bg-yellow-500', 'hover:bg-yellow-600', 'focus:ring-yellow-500', 'text-gray-900', 'font-semibold');
+                    warning.classList.remove('hidden');
+                    warning.classList.add('flex');
+                } else {
+                    button.textContent = `Egységszám: ${state.unitNumber}`;
+                    button.classList.remove('bg-yellow-500', 'hover:bg-yellow-600', 'focus:ring-yellow-500', 'text-gray-900', 'font-semibold');
+                    button.classList.add('bg-indigo-600', 'hover:bg-indigo-700', 'focus:ring-indigo-500', 'text-white');
+                    warning.classList.add('hidden');
+                    warning.classList.remove('flex');
+                }
+            }
+            
+            function handleLogin() {
+                const name = dom.userNameInput.value.trim();
+                const rank = dom.userRankInput.value;
+                const badge = dom.userBadgeInput.value.trim();
+
+                if (!name || !rank || !badge) {
+                    dom.loginError.textContent = 'Kérlek, tölts ki minden mezőt!';
+                    return;
+                }
+
+                state.userName = name;
+                state.userRank = rank;
+                state.userBadge = badge;
+                
+                dom.displayName.textContent = state.userName;
+                dom.displayRank.textContent = state.userRank;
+                dom.displayBadge.textContent = `#${state.userBadge}`;
+                dom.loginError.textContent = '';
+                dom.loginModal.classList.add('hidden');
+
+                const loggedInStatus = document.createElement('span');
+                loggedInStatus.className = 'px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 bg-gray-200 dark:bg-gray-700 rounded-lg';
+                loggedInStatus.textContent = 'Bejelentkezve';
+                dom.loginStatusContainer.innerHTML = '';
+                dom.loginStatusContainer.appendChild(loggedInStatus);
+                updateComplaintPreview();
+                updateAllPlaceholderTexts();
+            }
+            
+            function handleLogout() {
+                window.location.reload();
+            }
+
+            function handleUnitSet() {
+                const unitNum = dom.unitNumberInput.value.trim();
+                if (!unitNum) {
+                    dom.unitError.textContent = 'Kérlek, add meg az egységszámot!';
+                    return;
+                }
+                state.unitNumber = unitNum;
+                updateUnitButtonState();
+                dom.unitError.textContent = '';
+                dom.unitModal.classList.add('hidden');
+                updateAllPlaceholderTexts();
+            }
+
+            window.toggleAccordion = function(menuId) {
+                const menu = document.getElementById(menuId);
+                const icon = document.getElementById(`${menuId}-icon`);
+                if (menu && icon) {
+                    menu.classList.toggle('hidden');
+                    icon.classList.toggle('rotate-180');
+                }
+            }
+
+            function showPanel(panelId) {
+                dom.contentPanels.forEach(panel => panel.classList.remove('active'));
+                const activePanel = document.getElementById(panelId);
+                if (activePanel) {
+                    activePanel.classList.add('active');
+                }
+            }
+
+            function showNotification(message, type = 'error') {
+                clearTimeout(notificationTimeout);
+                dom.notificationMessage.textContent = message;
+                dom.notificationToast.className = `text-white font-bold py-3 px-6 rounded-lg shadow-lg ${type === 'error' ? 'bg-red-500' : 'bg-green-500'}`;
+                dom.notificationToast.classList.add('show');
+                notificationTimeout = setTimeout(() => {
+                    dom.notificationToast.classList.remove('show');
+                }, 3000);
+            }
+
+            function checkLogin() {
+                if (!state.userName || !state.userRank || !state.userBadge) {
+                    showNotification('Kérlek, először jelentkezz be!');
+                    return false;
+                }
+                return true;
+            }
+
+            function checkUnitNumber(promptIfMissing = false) {
+                if (state.unitNumber === 'N/A') {
+                    if (promptIfMissing) {
+                        showNotification('Kérlek, add meg az egységszámot!');
+                        dom.unitModal.classList.remove('hidden');
+                    }
+                    return false;
+                }
+                return true;
+            }
+
+            function getTimeOfDayGreeting(isStart) {
+                const hour = new Date().getHours();
+                const isEvening = hour >= 20 || hour < 4;
+                if (isStart) {
+                    return isEvening ? "Szép Estét!" : "Szép Napot!";
+                } else {
+                    return isEvening ? "További Szép Estét." : "További Szép Napot.";
+                }
+            }
+
+            function copyToClipboard(text, button) {
+                if (!text) return;
+                const textarea = document.createElement('textarea');
+                textarea.value = text;
+                textarea.style.position = 'fixed';
+                textarea.style.opacity = 0;
+                document.body.appendChild(textarea);
+                textarea.focus();
+                textarea.select();
+                try {
+                    const successful = document.execCommand('copy');
+                    if (successful) {
+                        if (button) {
+                            const originalText = button.textContent;
+                            button.textContent = 'Másolva!';
+                            button.disabled = true;
+                            setTimeout(() => {
+                                button.textContent = originalText;
+                                button.disabled = false;
+                            }, 2000);
+                        }
+                        showNotification('Vágólapra másolva!', 'success');
+                    } else {
+                        showNotification('Hiba történt a másolás során.');
+                    }
+                } catch (err) {
+                    console.error('Hiba a másolás során:', err);
+                    showNotification('Hiba történt a másolás során.');
+                }
+                document.body.removeChild(textarea);
+            }
+
+            window.copyText = function(text, button) { copyToClipboard(text, button); }
+            window.copyDutyStart = function(button) {
+                if (!checkLogin()) return;
+                copyToClipboard(dom.dutyStartText.textContent, button);
+            }
+            window.copyDutyEnd = function(button) {
+                if (!checkLogin()) return;
+                copyToClipboard(dom.dutyEndText.textContent, button);
+            }
+            
+            window.copyFormation = function(button) {
+                if (!checkLogin() || !checkUnitNumber(true)) return;
+                copyToClipboard(dom.formationText.textContent, button);
+            }
+            
+            function updateAllPlaceholderTexts() {
+                const name = state.userName || '{név}';
+                const rank = state.userRank || '{rendfokozat}';
+                const unit = state.unitNumber !== 'N/A' ? state.unitNumber : '{egységszám}';
+
+                dom.dutyStartText.textContent = `r ${name} ${rank} 10-8. ${getTimeOfDayGreeting(true)}`;
+                dom.dutyEndText.textContent = `r ${name} ${rank} 10-10. ${getTimeOfDayGreeting(false)}`;
+
+                const p1Name = document.getElementById('partner1-name').value.trim();
+                const p1Rank = document.getElementById('partner1-rank').value;
+                const p2Name = document.getElementById('partner2-name').value.trim();
+                const p2Rank = document.getElementById('partner2-rank').value;
+                let partners = (p1Name && p1Rank) ? `, ${p1Name} ${p1Rank}` : '';
+                partners += (p2Name && p2Rank) ? `, ${p2Name} ${p2Rank}` : '';
+                dom.formationText.textContent = `r ${unit} megalakul. Az egységet alkotja: ${name} ${rank}${partners}. Az egység elérhető és riasztható.`;
+
+                const color = dom.idCheck.color.value.trim() || '{szín}';
+                const type = dom.idCheck.type.value.trim() || '{típus}';
+                const location = dom.idCheck.location.value.trim() || '{helyszín}';
+                const frsz = dom.idCheck.frsz.value.trim() || '{rendszám}';
+                const passengers = dom.idCheck.passengers.value.trim() || '{utasok száma}';
+                dom.idCheckPreview.textContent = `r ${unit} intézkedés alá von egy ${color} ${type}-t ${location} közelében. A jármű forgalmi rendszáma: ${frsz}. A járműben ${passengers} fő tartózkodik. Az egység nem elérhető.`;
+                dom.idCheckEndPreview.textContent = `r ${unit} végzett az intézkedéssel, újra elérhető.`;
+            }
+
+            window.copyIdCheckStart = function(button) {
+                if (!checkUnitNumber(true)) return;
+                const inputs = [dom.idCheck.color, dom.idCheck.type, dom.idCheck.location, dom.idCheck.frsz, dom.idCheck.passengers];
+                if (inputs.some(input => !input.value.trim())) {
+                    showNotification('Kérlek, tölts ki minden mezőt az intézkedéshez!');
+                    return;
+                }
+                copyToClipboard(dom.idCheck.preview.textContent, button);
+            }
+            
+            window.copyIdCheckEnd = function(button) {
+                if (!checkUnitNumber(true)) return;
+                copyToClipboard(dom.idCheckEndPreview.textContent, button);
+            }
+
+            function splitText(text, maxLength) {
+                if (text.length <= maxLength) return [text.trim()];
+                const sentences = text.match(/[^.!?\n]+[.!?\n]*|[^.!?\n]+$/g) || [];
+                const parts = [];
+                let currentPart = "";
+                for (const sentence of sentences) {
+                    const trimmedSentence = sentence.trim();
+                    if (!trimmedSentence) continue;
+                    if (currentPart.length > 0 && (currentPart.length + 1 + trimmedSentence.length) > maxLength) {
+                        parts.push(currentPart);
+                        currentPart = trimmedSentence;
+                    } else {
+                        currentPart += (currentPart.length > 0 ? " " : "") + trimmedSentence;
+                    }
+                }
+                if (currentPart) parts.push(currentPart);
+                const finalParts = [];
+                parts.forEach(part => {
+                    if (part.length > maxLength) {
+                        let remainingSubPart = part;
+                        while (remainingSubPart.length > 0) {
+                            if (remainingSubPart.length <= maxLength) {
+                                finalParts.push(remainingSubPart);
+                                break;
+                            }
+                            let chunk = remainingSubPart.substring(0, maxLength);
+                            let lastSpace = chunk.lastIndexOf(' ');
+                            if (lastSpace <= 0) lastSpace = maxLength;
+                            finalParts.push(remainingSubPart.substring(0, lastSpace));
+                            remainingSubPart = remainingSubPart.substring(lastSpace).trim();
+                        }
+                    } else {
+                        finalParts.push(part);
+                    }
+                });
+                return finalParts;
+            }
+
+            function renderInfractions() {
+                const searchTerm = dom.infractionSearch.value.toLowerCase();
+                const filteredInfractions = infractions.filter(inf => 
+                    inf.title.toLowerCase().includes(searchTerm) || 
+                    inf.description.toLowerCase().includes(searchTerm)
+                );
+                dom.infractionList.innerHTML = '';
+                if (filteredInfractions.length === 0) {
+                    dom.infractionList.innerHTML = `<p class="text-gray-500 dark:text-gray-400 text-center">Nincs találat.</p>`;
+                    return;
+                }
+                filteredInfractions.forEach(inf => {
+                    const container = document.createElement('div');
+                    container.className = 'bg-white dark:bg-gray-800 p-4 rounded-lg';
+                    const title = document.createElement('h3');
+                    title.className = 'font-semibold text-lg mb-2 text-gray-900 dark:text-white';
+                    title.textContent = inf.title;
+                    const desc = document.createElement('p');
+                    desc.className = 'text-gray-600 dark:text-gray-400 mb-4 text-sm';
+                    desc.textContent = inf.description;
+                    const buttonContainer = document.createElement('div');
+                    buttonContainer.className = 'flex flex-wrap gap-2';
+                    const textParts = splitText(inf.description, 128);
+                    if (textParts.length > 1) {
+                        textParts.forEach((part, index) => {
+                            const btn = document.createElement('button');
+                            btn.className = 'copy-btn text-xs';
+                            btn.textContent = `${index + 1}. Rész másolása`;
+                            btn.onclick = () => copyToClipboard(part, btn);
+                            buttonContainer.appendChild(btn);
+                        });
+                    } else {
+                        const btn = document.createElement('button');
+                        btn.className = 'copy-btn';
+                        btn.textContent = 'Másolás';
+                        btn.onclick = () => copyToClipboard(inf.description, btn);
+                        buttonContainer.appendChild(btn);
+                    }
+                    container.append(title, desc, buttonContainer);
+                    dom.infractionList.appendChild(container);
+                });
+            }
+            
+            function updateComplaintPreview() {
+                const name = state.userName || '{név}';
+                const rank = state.userRank || '{rendfokozat}';
+                const badge = state.userBadge || '{jelvényszám}';
+                dom.complaintPart2Preview.textContent = `${name} ${rank} vagyok a NAV-tól, jelvényszámom: ${badge}.`;
+            }
+
+            window.copyComplaintPart1 = function(button) {
+                const text = "Amennyiben nem ért egyet az intézkedéssel, panaszt tehet a Nemzeti Adó- és Vámhivatal weboldalán, a BEO-nál.";
+                copyToClipboard(text, button);
+            }
+
+            window.copyComplaintPart2 = function(button) {
+                if (!checkLogin()) return;
+                const text = dom.complaintPart2Preview.textContent;
+                copyToClipboard(text, button);
+            }
+
+            function setTheme(theme) {
+                if (theme === 'light') {
+                    document.documentElement.classList.remove('dark');
+                } else {
+                    document.documentElement.classList.add('dark');
+                }
+                updateThemeButtons();
+            }
+
+            function updateThemeButtons() {
+                if (document.documentElement.classList.contains('dark')) {
+                    dom.themeDarkBtn.classList.add('bg-indigo-600', 'text-white');
+                    dom.themeDarkBtn.classList.remove('text-gray-500');
+                    dom.themeLightBtn.classList.remove('bg-white', 'text-gray-900', 'shadow');
+                    dom.themeLightBtn.classList.add('text-gray-500');
+                } else {
+                    dom.themeLightBtn.classList.add('bg-white', 'text-gray-900', 'shadow');
+                    dom.themeLightBtn.classList.remove('text-gray-500');
+                    dom.themeDarkBtn.classList.remove('bg-indigo-600', 'text-white');
+                    dom.themeDarkBtn.classList.add('text-gray-500');
+                }
+            }
+            
             populateRankDropdowns();
             addEventListeners();
             updateAllPlaceholderTexts();
             toggleAccordion('radio-menu', true);
+            toggleAccordion('copypaste-menu', true);
+            toggleAccordion('changelog-menu', true);
             updateUnitButtonState();
             renderInfractions();
             updateComplaintPreview();
             updateThemeButtons();
         }
-        
-        // --- OBFUSCATED ACCESS LOGIC ---
-        const dataTokens = [
-            "c2VzZW5hdmdlZDIwMjVuYXY=",
-            "b3JiaTIwMDg=",
-            "aGFyYXJpY3Np",
-            "a29sYTE5Mg=="
-        ];
-
-        function verifyAccess(input) {
-            try {
-                const encodedInput = btoa(input);
-                return dataTokens.includes(encodedInput);
-            } catch (e) {
-                console.error("Encoding failed:", e);
-                return false;
-            }
-        }
-
-        function handleAuthAttempt() {
-            const enteredValue = dom.passwordInput.value;
-            if (verifyAccess(enteredValue)) {
-                dom.passwordModal.classList.add('hidden');
-                document.getElementById('background-canvas').style.opacity = '0.1';
-                dom.app.classList.remove('hidden');
-                dom.loginModal.classList.remove('hidden');
-                appInit();
-            } else {
-                dom.passwordError.textContent = "Helytelen belépési kód!";
-                dom.passwordInput.value = '';
-            }
-        }
-        
-        dom.passwordSubmit.addEventListener('click', handleAuthAttempt);
-        dom.passwordInput.addEventListener('keypress', function(event) {
-            if (event.key === "Enter") {
-                event.preventDefault();
-                handleAuthAttempt();
-            }
-        });
-        dom.togglePassword.addEventListener('click', function() {
-            const type = dom.passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-            dom.passwordInput.setAttribute('type', type);
-            dom.eyeOpen.classList.toggle('hidden');
-            dom.eyeClosed.classList.toggle('hidden');
-        });
-
-
-        function populateRankDropdowns() {
-            dom.rankSelects.forEach(select => {
-                select.innerHTML = '<option value="" disabled selected>Válassz...</option>';
-            });
-            dom.rankSelects.forEach(select => {
-                ranks.forEach(rank => {
-                    const option = document.createElement('option');
-                    option.value = rank;
-                    option.textContent = rank;
-                    select.appendChild(option);
-                });
-            });
-        }
-
-        function addEventListeners() {
-            dom.loginSubmit.addEventListener('click', handleLogin);
-            dom.loginButton.addEventListener('click', () => dom.loginModal.classList.remove('hidden'));
-            dom.logoutButton.addEventListener('click', handleLogout);
-            dom.unitButton.addEventListener('click', () => dom.unitModal.classList.remove('hidden'));
-            dom.unitSubmit.addEventListener('click', handleUnitSet);
-            
-            dom.navLinks.forEach(link => {
-                link.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const targetId = link.getAttribute('data-target');
-                    showPanel(targetId);
-                });
-            });
-
-            Object.values(dom.idCheck).forEach(input => {
-                if (input.tagName === 'INPUT' || input.tagName === 'SELECT') {
-                    input.addEventListener('input', updateAllPlaceholderTexts);
-                }
-            });
-            
-            document.getElementById('partner1-name').addEventListener('input', updateAllPlaceholderTexts);
-            document.getElementById('partner1-rank').addEventListener('input', updateAllPlaceholderTexts);
-            document.getElementById('partner2-name').addEventListener('input', updateAllPlaceholderTexts);
-            document.getElementById('partner2-rank').addEventListener('input', updateAllPlaceholderTexts);
-            document.getElementById('1110-location').addEventListener('input', updateAllPlaceholderTexts);
-            document.getElementById('1110-activity').addEventListener('input', updateAllPlaceholderTexts);
-
-            const capitalizeWords = (e) => {
-                const value = e.target.value;
-                e.target.value = value.split(' ').map(word => 
-                    word.charAt(0).toUpperCase() + word.slice(1)
-                ).join(' ');
-            };
-            
-            dom.idCheck.type.addEventListener('input', capitalizeWords);
-            dom.idCheck.location.addEventListener('input', capitalizeWords);
-            document.getElementById('1110-location').addEventListener('input', capitalizeWords);
-
-            dom.idCheck.frsz.addEventListener('input', (e) => {
-                e.target.value = e.target.value.toUpperCase();
-                updateAllPlaceholderTexts();
-            });
-
-            dom.infractionSearch.addEventListener('input', () => renderInfractions());
-
-            dom.themeLightBtn.addEventListener('click', () => setTheme('light'));
-            dom.themeDarkBtn.addEventListener('click', () => setTheme('dark'));
-        }
-
-        function updateUnitButtonState() {
-            const button = dom.unitButton;
-            const warning = dom.unitWarning;
-            if (state.unitNumber === 'N/A') {
-                button.textContent = 'Egységszám';
-                button.classList.remove('bg-indigo-600', 'hover:bg-indigo-700', 'focus:ring-indigo-500', 'text-white');
-                button.classList.add('bg-yellow-500', 'hover:bg-yellow-600', 'focus:ring-yellow-500', 'text-gray-900', 'font-semibold');
-                warning.classList.remove('hidden');
-                warning.classList.add('flex');
-            } else {
-                button.textContent = `Egységszám: ${state.unitNumber}`;
-                button.classList.remove('bg-yellow-500', 'hover:bg-yellow-600', 'focus:ring-yellow-500', 'text-gray-900', 'font-semibold');
-                button.classList.add('bg-indigo-600', 'hover:bg-indigo-700', 'focus:ring-indigo-500', 'text-white');
-                warning.classList.add('hidden');
-                warning.classList.remove('flex');
-            }
-        }
-        
-        function handleLogin() {
-            const name = dom.userNameInput.value.trim();
-            const rank = dom.userRankInput.value;
-            const badge = dom.userBadgeInput.value.trim();
-
-            if (!name || !rank || !badge) {
-                dom.loginError.textContent = 'Kérlek, tölts ki minden mezőt!';
-                return;
-            }
-
-            state.userName = name;
-            state.userRank = rank;
-            state.userBadge = badge;
-            
-            dom.displayName.textContent = state.userName;
-            dom.displayRank.textContent = state.userRank;
-            dom.displayBadge.textContent = `#${state.userBadge}`;
-            dom.loginError.textContent = '';
-            dom.loginModal.classList.add('hidden');
-
-            const loggedInStatus = document.createElement('span');
-            loggedInStatus.className = 'px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 bg-gray-200 dark:bg-gray-700 rounded-lg';
-            loggedInStatus.textContent = 'Bejelentkezve';
-            dom.loginStatusContainer.innerHTML = '';
-            dom.loginStatusContainer.appendChild(loggedInStatus);
-            updateComplaintPreview();
-            updateAllPlaceholderTexts();
-        }
-        
-        function handleLogout() {
-            window.location.reload();
-        }
-
-        function handleUnitSet() {
-            const unitNum = dom.unitNumberInput.value.trim();
-            if (!unitNum) {
-                dom.unitError.textContent = 'Kérlek, add meg az egységszámot!';
-                return;
-            }
-            state.unitNumber = unitNum;
-            updateUnitButtonState();
-            dom.unitError.textContent = '';
-            dom.unitModal.classList.add('hidden');
-            updateAllPlaceholderTexts();
-        }
-
-        function showPanel(panelId) {
-            dom.contentPanels.forEach(panel => panel.classList.remove('active'));
-            const activePanel = document.getElementById(panelId);
-            if (activePanel) {
-                activePanel.classList.add('active');
-            }
-        }
-
-        function toggleAccordion(menuId, forceOpen = false) {
-            const menu = document.getElementById(menuId);
-            const icon = document.getElementById(`${menuId}-icon`);
-            if (forceOpen) {
-                menu.classList.remove('hidden');
-                icon.classList.add('rotate-180');
-            } else {
-                menu.classList.toggle('hidden');
-                icon.classList.toggle('rotate-180');
-            }
-        }
-
-        function showNotification(message, type = 'error') {
-            clearTimeout(notificationTimeout);
-            dom.notificationMessage.textContent = message;
-            dom.notificationToast.className = `text-white font-bold py-3 px-6 rounded-lg shadow-lg ${type === 'error' ? 'bg-red-500' : 'bg-green-500'}`;
-            dom.notificationToast.classList.add('show');
-            notificationTimeout = setTimeout(() => {
-                dom.notificationToast.classList.remove('show');
-            }, 3000);
-        }
-
-        function checkLogin() {
-            if (!state.userName || !state.userRank || !state.userBadge) {
-                showNotification('Kérlek, először jelentkezz be!');
-                return false;
-            }
-            return true;
-        }
-
-        function checkUnitNumber() {
-            if (state.unitNumber === 'N/A') {
-                showNotification('Kérlek, add meg az egységszámot!');
-                return false;
-            }
-            return true;
-        }
-
-        function getTimeOfDayGreeting(isStart) {
-            const hour = new Date().getHours();
-            const isEvening = hour >= 20 || hour < 4;
-            if (isStart) {
-                return isEvening ? "Szép Estét!" : "Szép Napot!";
-            } else {
-                return isEvening ? "További Szép Estét." : "További Szép Napot.";
-            }
-        }
-
-        function copyToClipboard(text, button) {
-            if (!text) return;
-            const textarea = document.createElement('textarea');
-            textarea.value = text;
-            textarea.style.position = 'fixed';
-            textarea.style.opacity = 0;
-            document.body.appendChild(textarea);
-            textarea.focus();
-            textarea.select();
-            try {
-                const successful = document.execCommand('copy');
-                if (successful) {
-                    if (button) {
-                        const originalText = button.textContent;
-                        button.textContent = 'Másolva!';
-                        button.disabled = true;
-                        setTimeout(() => {
-                            button.textContent = originalText;
-                            button.disabled = false;
-                        }, 2000);
-                    }
-                    showNotification('Vágólapra másolva!', 'success');
-                } else {
-                    showNotification('Hiba történt a másolás során.');
-                }
-            } catch (err) {
-                console.error('Hiba a másolás során:', err);
-                showNotification('Hiba történt a másolás során.');
-            }
-            document.body.removeChild(textarea);
-        }
-
-        window.copyText = function(text, button) { copyToClipboard(text, button); }
-        window.copyDutyStart = function(button) {
-            if (!checkLogin()) return;
-            copyToClipboard(dom.dutyStartText.textContent, button);
-        }
-        window.copyDutyEnd = function(button) {
-            if (!checkLogin()) return;
-            copyToClipboard(dom.dutyEndText.textContent, button);
-        }
-        
-        window.copyFormation = function(button) {
-            if (!checkLogin() || !checkUnitNumber()) return;
-            copyToClipboard(dom.formationText.textContent, button);
-        }
-
-        window.copy1110Report = function(button) {
-            if (!checkUnitNumber()) return;
-            const location = document.getElementById('1110-location').value.trim();
-            if (!location) {
-                showNotification('Kérlek, add meg a helyszínt!');
-                return;
-            }
-            copyToClipboard(dom.report1110Text.textContent, button);
-        }
-        
-        function updateAllPlaceholderTexts() {
-            const name = state.userName || '{név}';
-            const rank = state.userRank || '{rendfokozat}';
-            const unit = state.unitNumber !== 'N/A' ? state.unitNumber : '{egységszám}';
-
-            dom.dutyStartText.textContent = `r ${name} ${rank} 10-8. ${getTimeOfDayGreeting(true)}`;
-            dom.dutyEndText.textContent = `r ${name} ${rank} 10-10. ${getTimeOfDayGreeting(false)}`;
-
-            const p1Name = document.getElementById('partner1-name').value.trim();
-            const p1Rank = document.getElementById('partner1-rank').value;
-            const p2Name = document.getElementById('partner2-name').value.trim();
-            const p2Rank = document.getElementById('partner2-rank').value;
-            let partners = (p1Name && p1Rank) ? `, ${p1Name} ${p1Rank}` : '';
-            partners += (p2Name && p2Rank) ? `, ${p2Name} ${p2Rank}` : '';
-            dom.formationText.textContent = `r ${unit} megalakul. Az egységet alkotja: ${name} ${rank}${partners}. Az egység elérhető és riasztható.`;
-
-            const color = dom.idCheck.color.value.trim() || '{szín}';
-            const type = dom.idCheck.type.value.trim() || '{típus}';
-            const location = dom.idCheck.location.value.trim() || '{helyszín}';
-            const frsz = dom.idCheck.frsz.value.toUpperCase().trim() || '{rendszám}';
-            const passengers = dom.idCheck.passengers.value.trim() || '{utasok száma}';
-            dom.idCheckPreview.textContent = `r ${unit} intézkedés alá von egy ${color} ${type}-t ${location} közelében. A jármű forgalmi rendszáma: ${frsz}. A járműben ${passengers} fő tartózkodik. Az egység nem elérhető.`;
-
-            const loc1110 = document.getElementById('1110-location').value.trim() || '{helyszin}';
-            const activityValue = document.getElementById('1110-activity').value;
-            let endText = "Az egység elérhető és riasztható bármely pillanatban.";
-            if (activityValue === 'igazoltatást') {
-                endText = "Az egység nem elérhető.";
-            }
-            dom.report1110Text.textContent = `r ${unit} 10-20 : ${loc1110}. Az egység ${activityValue} folytat. ${endText}`;
-        }
-
-        window.copyIdCheckStart = function(button) {
-            if (!checkUnitNumber()) return;
-            const inputs = [dom.idCheck.color, dom.idCheck.type, dom.idCheck.location, dom.idCheck.frsz, dom.idCheck.passengers];
-            if (inputs.some(input => !input.value.trim())) {
-                showNotification('Kérlek, tölts ki minden mezőt az intézkedéshez!');
-                return;
-            }
-            copyToClipboard(dom.idCheck.preview.textContent, button);
-        }
-        
-        window.copyIdCheckEnd = function(button) {
-            if (!checkUnitNumber()) return;
-            const text = `r ${state.unitNumber} végzett az intézkedéssel, újra elérhető.`;
-            copyToClipboard(text, button);
-        }
-
-        function splitText(text, maxLength) {
-            if (text.length <= maxLength) return [text.trim()];
-
-            const sentences = text.match(/[^.!?\n]+[.!?\n]*|[^.!?\n]+$/g) || [];
-            const parts = [];
-            let currentPart = "";
-
-            for (const sentence of sentences) {
-                const trimmedSentence = sentence.trim();
-                if (!trimmedSentence) continue;
-
-                if (currentPart.length > 0 && (currentPart.length + 1 + trimmedSentence.length) > maxLength) {
-                    parts.push(currentPart);
-                    currentPart = trimmedSentence;
-                } else {
-                    currentPart += (currentPart.length > 0 ? " " : "") + trimmedSentence;
-                }
-            }
-            if (currentPart) parts.push(currentPart);
-            
-            const finalParts = [];
-            parts.forEach(part => {
-                if (part.length > maxLength) {
-                    let remainingSubPart = part;
-                    while (remainingSubPart.length > 0) {
-                        if (remainingSubPart.length <= maxLength) {
-                            finalParts.push(remainingSubPart);
-                            break;
-                        }
-                        let chunk = remainingSubPart.substring(0, maxLength);
-                        let lastSpace = chunk.lastIndexOf(' ');
-                        if (lastSpace <= 0) lastSpace = maxLength;
-                        finalParts.push(remainingSubPart.substring(0, lastSpace));
-                        remainingSubPart = remainingSubPart.substring(lastSpace).trim();
-                    }
-                } else {
-                    finalParts.push(part);
-                }
-            });
-
-            return finalParts;
-        }
-
-        function renderInfractions() {
-            const searchTerm = dom.infractionSearch.value.toLowerCase();
-            const filteredInfractions = infractions.filter(inf => 
-                inf.title.toLowerCase().includes(searchTerm) || 
-                inf.description.toLowerCase().includes(searchTerm)
-            );
-
-            dom.infractionList.innerHTML = '';
-
-            if (filteredInfractions.length === 0) {
-                dom.infractionList.innerHTML = `<p class="text-gray-500 dark:text-gray-400 text-center">Nincs találat.</p>`;
-                return;
-            }
-
-            filteredInfractions.forEach(inf => {
-                const container = document.createElement('div');
-                container.className = 'bg-white dark:bg-gray-800 p-4 rounded-lg';
-
-                const title = document.createElement('h3');
-                title.className = 'font-semibold text-lg mb-2 text-gray-900 dark:text-white';
-                title.textContent = inf.title;
-
-                const desc = document.createElement('p');
-                desc.className = 'text-gray-600 dark:text-gray-400 mb-4 text-sm';
-                desc.textContent = inf.description;
-                
-                const buttonContainer = document.createElement('div');
-                buttonContainer.className = 'flex flex-wrap gap-2';
-
-                const textParts = splitText(inf.description, 128);
-
-                if (textParts.length > 1) {
-                    textParts.forEach((part, index) => {
-                        const btn = document.createElement('button');
-                        btn.className = 'copy-btn text-xs';
-                        btn.textContent = `${index + 1}. Rész másolása`;
-                        btn.onclick = () => copyToClipboard(part, btn);
-                        buttonContainer.appendChild(btn);
-                    });
-                } else {
-                    const btn = document.createElement('button');
-                    btn.className = 'copy-btn';
-                    btn.textContent = 'Másolás';
-                    btn.onclick = () => copyToClipboard(inf.description, btn);
-                    buttonContainer.appendChild(btn);
-                }
-
-                container.append(title, desc, buttonContainer);
-                dom.infractionList.appendChild(container);
-            });
-        }
-        
-        function updateComplaintPreview() {
-            const name = state.userName || '{név}';
-            const rank = state.userRank || '{rendfokozat}';
-            const badge = state.userBadge || '{jelvényszám}';
-            dom.complaintPart2Preview.textContent = `${name} ${rank} vagyok a NAV-tól, jelvényszámom: ${badge}.`;
-        }
-
-        window.copyComplaintPart1 = function(button) {
-            const text = "Amennyiben nem ért egyet az intézkedéssel, panaszt tehet a Nemzeti Adó- és Vámhivatal weboldalán, a BEO-nál.";
-            copyToClipboard(text, button);
-        }
-
-        window.copyComplaintPart2 = function(button) {
-            if (!checkLogin()) return;
-            const text = dom.complaintPart2Preview.textContent;
-            copyToClipboard(text, button);
-        }
-
-        function setTheme(theme) {
-            if (theme === 'light') {
-                document.documentElement.classList.remove('dark');
-            } else {
-                document.documentElement.classList.add('dark');
-            }
-            updateThemeButtons();
-        }
-
-        function updateThemeButtons() {
-            if (document.documentElement.classList.contains('dark')) {
-                dom.themeDarkBtn.classList.add('bg-indigo-600', 'text-white');
-                dom.themeDarkBtn.classList.remove('text-gray-500');
-                dom.themeLightBtn.classList.remove('bg-white', 'text-gray-900', 'shadow');
-                dom.themeLightBtn.classList.add('text-gray-500');
-            } else {
-                dom.themeLightBtn.classList.add('bg-white', 'text-gray-900', 'shadow');
-                dom.themeLightBtn.classList.remove('text-gray-500');
-                dom.themeDarkBtn.classList.remove('bg-indigo-600', 'text-white');
-                dom.themeDarkBtn.classList.add('text-gray-500');
-            }
-        }
-
-        const canvas = document.getElementById('background-canvas');
-        const ctx = canvas.getContext('2d');
-        let shapes = [];
-
-        function resizeCanvas() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        }
-
-        function createShapes() {
-            const shapeCount = 25;
-            shapes = [];
-            for (let i = 0; i < shapeCount; i++) {
-                shapes.push({
-                    x: Math.random() * canvas.width,
-                    y: Math.random() * canvas.height,
-                    size: Math.random() * 50 + 25,
-                    sides: Math.floor(Math.random() * 3) + 3,
-                    angle: Math.random() * Math.PI * 2,
-                    speed: Math.random() * 0.4 + 0.1,
-                    rotationSpeed: (Math.random() - 0.5) * 0.01,
-                });
-            }
-        }
-
-        function animate() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            const isDarkMode = document.documentElement.classList.contains('dark');
-            shapes.forEach(shape => {
-                shape.y -= shape.speed;
-                shape.angle += shape.rotationSpeed;
-                if (shape.y < -shape.size) {
-                    shape.y = canvas.height + shape.size;
-                    shape.x = Math.random() * canvas.width;
-                }
-                shape.color = isDarkMode 
-                    ? `rgba(110, 128, 152, ${Math.random() * 0.2 + 0.15})`
-                    : `rgba(147, 197, 253, ${Math.random() * 0.3 + 0.2})`;
-                drawShape(shape);
-            });
-            requestAnimationFrame(animate);
-        }
-
-        function drawShape(shape) {
-            ctx.save();
-            ctx.translate(shape.x, shape.y);
-            ctx.rotate(shape.angle);
-            ctx.beginPath();
-            for (let i = 0; i < shape.sides; i++) {
-                const angle = (i / shape.sides) * Math.PI * 2;
-                const x = shape.size * Math.cos(angle);
-                const y = shape.size * Math.sin(angle);
-                if (i === 0) {
-                    ctx.moveTo(x, y);
-                } else {
-                    ctx.lineTo(x, y);
-                }
-            }
-            ctx.closePath();
-            ctx.strokeStyle = shape.color;
-            ctx.lineWidth = 2;
-            ctx.stroke();
-            ctx.restore();
-        }
-
-        window.addEventListener('resize', () => {
-            resizeCanvas();
-            createShapes();
-        });
-
-        resizeCanvas();
-        createShapes();
-        animate();
     </script>
 </body>
 </html>
