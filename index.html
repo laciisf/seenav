@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NAV Segédprogram</title>
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="logo.png">
+    <script src="https://kit.fontawesome.com/d89dc5cc2b.js" crossorigin="anonymous"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,11 +48,19 @@
         #notification-toast.show {
             transform: translate(-50%, 0);
         }
+        /* Updated copy-btn to include flex for icon alignment */
         .copy-btn {
-            @apply px-4 py-2 bg-sky-600 text-white font-semibold rounded-lg hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed;
+            @apply px-4 py-2 bg-sky-600 text-white font-semibold rounded-lg hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2;
         }
         .dark .copy-btn {
             @apply focus:ring-offset-gray-800;
+        }
+        /* Font Awesome ikonok stílusai - Fontos, hogy itt legyen a font-family deklaráció */
+        .fa-solid {
+            font-family: "Font Awesome 6 Solid" !important; /* Biztosítja, hogy a megfelelő betűtípus legyen használva */
+            font-weight: 900; /* Szükséges a solid ikonokhoz */
+            font-size: 1rem; /* Alapértelmezett méret */
+            color: inherit; /* Örökli a szülőelem színét */
         }
     </style>
 </head>
@@ -81,22 +90,22 @@
                 <div>
                     <button id="radio-menu-btn" class="w-full flex items-center justify-between p-2 text-base font-normal text-gray-800 dark:text-gray-200 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-150 group">
                         <span class="flex items-center">
-                            <svg class="w-5 h-5 mr-3 text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white transition-colors" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
+                            <i class="fa-solid fa-walkie-talkie mr-3 text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white transition-colors"></i> 
                             <span>Rádiózás</span>
                         </span>
                         <svg id="radio-menu-icon" class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
                     <div id="radio-menu" class="hidden mt-2 space-y-2 pl-4">
                         <a href="#" class="nav-link flex items-center p-2 text-sm text-gray-600 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 group" data-target="szolgalat-panel">
-                            <svg class="w-5 h-5 mr-3 text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white transition-colors" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.52 19c.64-2.2 1.84-3 3.22-3h6.52c1.38 0 2.58.8 3.22 3" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 13V9" /><circle cx="12" cy="6" r="3" /></svg>
+                            <i class="fa-solid fa-business-time mr-3 text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white transition-colors"></i>
                             Szolgálat
                         </a>
                         <a href="#" class="nav-link flex items-center p-2 text-sm text-gray-600 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 group" data-target="megalakulas-panel">
-                            <svg class="w-5 h-5 mr-3 text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white transition-colors" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                            <i class="fa-solid fa-people-roof mr-3 text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white transition-colors"></i>
                             Megalakulás
                         </a>
                         <a href="#" class="nav-link flex items-center p-2 text-sm text-gray-600 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 group" data-target="igazoltatas-panel">
-                            <svg class="w-5 h-5 mr-3 text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white transition-colors" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 012-2h4a2 2 0 012 2v1m-4 0h4" /></svg>
+                            <i class="fa-solid fa-user-check mr-3 text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white transition-colors"></i>
                             Igazoltatás
                         </a>
                     </div>
@@ -104,18 +113,18 @@
                 <div>
                     <button id="copypaste-menu-btn" class="w-full flex items-center justify-between p-2 text-base font-normal text-gray-800 dark:text-gray-200 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-150 group">
                         <span class="flex items-center">
-                            <svg class="w-5 h-5 mr-3 text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white transition-colors" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h4M8 7a2 2 0 012-2h4a2 2 0 012 2v8a2 2 0 01-2 2h-4a2 2 0 01-2-2l-2-4h14l-2 4a2 2 0 01-2 2h-4a2 2 0 01-2-2V7z" /></svg>
+                            <i class="fa-solid fa-copy mr-3 text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white transition-colors"></i>
                             <span>Copy-Paste</span>
                         </span>
                         <svg id="copypaste-menu-icon" class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
                     <div id="copypaste-menu" class="hidden mt-2 space-y-2 pl-4">
                         <a href="#" class="nav-link flex items-center p-2 text-sm text-gray-600 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 group" data-target="indoklas-panel">
-                             <svg class="w-5 h-5 mr-3 text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white transition-colors" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" /></svg>
+                             <i class="fa-solid fa-person-chalkboard mr-3 text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white transition-colors"></i>
                             Intézkedés indoklása
                         </a>
                         <a href="#" class="nav-link flex items-center p-2 text-sm text-gray-600 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 group" data-target="panasztetel-panel">
-                            <svg class="w-5 h-5 mr-3 text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white transition-colors" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                            <i class="fa-solid fa-triangle-exclamation mr-3 text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white transition-colors"></i>
                             Panasztétel
                         </a>
                     </div>
@@ -123,16 +132,16 @@
                 <div>
                     <button id="changelog-menu-btn" class="w-full flex items-center justify-between p-2 text-base font-normal text-gray-800 dark:text-gray-200 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-150 group">
                         <span class="flex items-center">
-                            <svg class="w-5 h-5 mr-3 text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white transition-colors" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16" /></svg>
+                            <i class="fa-solid fa-file-invoice mr-3 text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white transition-colors"></i>
                             <span>Changelog</span>
                         </span>
                         <svg id="changelog-menu-icon" class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
                     <div id="changelog-menu" class="hidden mt-2 space-y-2 pl-4">
-                         <a href="#" class="nav-link flex items-center p-2 text-sm text-gray-600 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 group" data-target="changelog-panel">
-                            <svg class="w-5 h-5 mr-3 text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white transition-colors" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" /></svg>
-                            Frissítések
-                        </a>
+                           <a href="#" class="nav-link flex items-center p-2 text-sm text-gray-600 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 group" data-target="changelog-panel">
+                                <i class="fa-solid fa-wrench mr-3 text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white transition-colors"></i>
+                                Frissítések
+                           </a>
                     </div>
                 </div>
             </nav>
@@ -174,34 +183,34 @@
                         <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Üdv a NAV Segédprogramban!</h1>
                     </div>
                     <div class="bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm py-4">
-                         <p class="text-gray-600 dark:text-gray-300">Válassz egy menüpontot a bal oldali sávból a kezdéshez.</p>
+                           <p class="text-gray-600 dark:text-gray-300">Válassz egy menüpontot a bal oldali sávból a kezdéshez.</p>
                     </div>
                 </div>
                 
                 <div id="szolgalat-panel" class="content-panel space-y-6">
                     <div class="flex items-baseline gap-3">
-                         <h1 class="text-2xl font-bold text-gray-900 dark:text-white">Szolgálat</h1>
-                         <p class="text-sm text-gray-500 dark:text-gray-400">Napot/Estét automatikusan változik a pontos idő szerint.</p>
+                        <h1 class="text-2xl font-bold text-gray-900 dark:text-white">Szolgálat</h1>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Napot/Estét automatikusan változik a pontos idő szerint.</p>
                     </div>
                     <div class="bg-white dark:bg-gray-800 p-4 rounded-lg">
-                        <h3 class="font-semibold text-lg mb-2 text-gray-900 dark:text-white">Szolgálatba lépés</h3>
+                        <h3 class="font-semibold text-lg mb-2 text-gray-900 dark:text-white"><i class="fa-solid fa-user-plus mr-2"></i>Szolgálatba lépés</h3>
                         <p class="text-gray-500 dark:text-gray-400 mb-3 text-sm"><code id="duty-start-text">r {név} {rendfokozat} 10-8. Szép Napot/Estét!</code></p>
-                        <button class="copy-btn" onclick="window.copyDutyStart(this)">Másolás</button>
+                        <button class="copy-btn" onclick="window.copyDutyStart(this)"><i class="fa-solid fa-copy"></i> Másolás</button>
                     </div>
                     <div class="bg-white dark:bg-gray-800 p-4 rounded-lg">
-                        <h3 class="font-semibold text-lg mb-2 text-gray-900 dark:text-white">Szolgálat leadása</h3>
+                        <h3 class="font-semibold text-lg mb-2 text-gray-900 dark:text-white"><i class="fa-solid fa-user-minus mr-2"></i>Szolgálat leadása</h3>
                         <p class="text-gray-500 dark:text-gray-400 mb-3 text-sm"><code id="duty-end-text">r {név} {rendfokozat} 10-10. További Szép Napot/Estét.</code></p>
-                        <button class="copy-btn" onclick="window.copyDutyEnd(this)">Másolás</button>
+                        <button class="copy-btn" onclick="window.copyDutyEnd(this)"><i class="fa-solid fa-copy"></i> Másolás</button>
                     </div>
                     <div class="bg-white dark:bg-gray-800 p-4 rounded-lg">
-                        <h3 class="font-semibold text-lg mb-2 text-gray-900 dark:text-white">Egységkeresés</h3>
+                        <h3 class="font-semibold text-lg mb-2 text-gray-900 dark:text-white"><i class="fa-solid fa-user-group mr-2"></i>Egységkeresés</h3>
                         <p class="text-gray-500 dark:text-gray-400 mb-3 text-sm"><code>r Van olyan egység, amelyhez tudnék csatlakozni, vagy valaki szeretne velem egy egységet alkotni?</code></p>
-                        <button class="copy-btn" onclick="window.copyText('r Van olyan egység, amelyhez tudnék csatlakozni, vagy valaki szeretne velem egy egységet alkotni?', this)">Másolás</button>
+                        <button class="copy-btn" onclick="window.copyText('r Van olyan egység, amelyhez tudnék csatlakozni, vagy valaki szeretne velem egy egységet alkotni?', this)"><i class="fa-solid fa-copy"></i> Másolás</button>
                     </div>
                     <div class="bg-white dark:bg-gray-800 p-4 rounded-lg">
-                        <h3 class="font-semibold text-lg mb-2 text-gray-900 dark:text-white">LINCOLN egység kérelem</h3>
+                        <h3 class="font-semibold text-lg mb-2 text-gray-900 dark:text-white"><i class="fa-solid fa-user-tag mr-2"></i>LINCOLN egység kérelem</h3>
                         <p class="text-gray-500 dark:text-gray-400 mb-3 text-sm"><code>r Válasz hiányában engedélyt szeretnék kérni LINCOLN egység alakítására. Amennyiben lesz elérhető, szabad pénzügyőr, felveszem.</code></p>
-                        <button class="copy-btn" onclick="window.copyText('r Válasz hiányában engedélyt szeretnék kérni LINCOLN egység alakítására. Amennyiben lesz elérhető, szabad pénzügyőr, felveszem.', this)">Másolás</button>
+                        <button class="copy-btn" onclick="window.copyText('r Válasz hiányában engedélyt szeretnék kérni LINCOLN egység alakítására. Amennyiben lesz elérhető, szabad pénzügyőr, felveszem.', this)"><i class="fa-solid fa-copy"></i> Másolás</button>
                     </div>
                 </div>
 
@@ -214,20 +223,20 @@
                         <p class="text-gray-600 dark:text-gray-400 text-sm">Add meg a járőrtársak adatait (opcionális).</p>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div class="space-y-2">
-                                <label for="partner1-name" class="text-sm font-medium">1. Járőrtárs neve</label>
+                                <label for="partner1-name" class="text-sm font-medium"><i class="fa-solid fa-id-card-clip mr-2"></i>1. Járőrtárs neve</label>
                                 <input type="text" id="partner1-name" class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-800 dark:text-white rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200">
-                                <label for="partner1-rank" class="text-sm font-medium">1. Járőrtárs rendfokozata</label>
+                                <label for="partner1-rank" class="text-sm font-medium"><i class="fa-solid fa-ranking-star mr-2"></i>1. Járőrtárs rendfokozata</label>
                                 <select id="partner1-rank" class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-800 dark:text-white rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200 rank-select"></select>
                             </div>
                             <div class="space-y-2">
-                                <label for="partner2-name" class="text-sm font-medium">2. Járőrtárs neve</label>
+                                <label for="partner2-name" class="text-sm font-medium"><i class="fa-solid fa-id-card-clip mr-2"></i>2. Járőrtárs neve</label>
                                 <input type="text" id="partner2-name" class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-800 dark:text-white rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200">
-                                <label for="partner2-rank" class="text-sm font-medium">2. Járőrtárs rendfokozata</label>
+                                <label for="partner2-rank" class="text-sm font-medium"><i class="fa-solid fa-ranking-star mr-2"></i>2. Járőrtárs rendfokozata</label>
                                 <select id="partner2-rank" class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-800 dark:text-white rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200 rank-select"></select>
                             </div>
                         </div>
                         <p class="text-gray-500 dark:text-gray-400 mb-3 text-sm"><code id="formation-text">r {egységszám} megalakul. Az egységet alkotja: {név} {rendfokozat}...</code></p>
-                        <button class="copy-btn" onclick="window.copyFormation(this)">Megalakulás másolása</button>
+                        <button class="copy-btn" onclick="window.copyFormation(this)"><i class="fa-solid fa-copy"></i> Megalakulás másolása</button>
                     </div>
                 </div>
 
@@ -242,35 +251,35 @@
                                 <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Intézkedés adatai</h3>
                                 <div>
                                     <label for="ig-car-color" class="text-sm font-medium flex items-center">
-                                        <svg class="w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 3.75A1.5 1.5 0 006 5.25v13.5a1.5 1.5 0 001.5 1.5h6a1.5 1.5 0 001.5-1.5V15a1.5 1.5 0 00-1.5-1.5h-2.25V5.25a1.5 1.5 0 00-1.5-1.5h-1.5z" /><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 5.25a1.5 1.5 0 00-1.5-1.5H7.5a1.5 1.5 0 000 3h1.5a1.5 1.5 0 001.5-1.5zm3.75 0a1.5 1.5 0 00-1.5-1.5H12a1.5 1.5 0 000 3h1.5a1.5 1.5 0 001.5-1.5z" /></svg>
+                                            <i class="fa-solid fa-palette mr-2"></i>
                                         Jármű színe
                                     </label>
                                     <input type="text" id="ig-car-color" class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-800 dark:text-white rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200 mt-1">
                                 </div>
                                 <div>
                                     <label for="ig-car-type" class="text-sm font-medium flex items-center">
-                                        <svg class="w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.125-.504 1.125-1.125V14.25m-17.25 4.5v-1.875a3.375 3.375 0 003.375-3.375h1.5a1.125 1.125 0 011.125 1.125v-1.5a3.375 3.375 0 00-3.375-3.375H3.375m10.5 11.25L10.5 11.25" /></svg>
+                                            <i class="fa-solid fa-car-rear mr-2"></i>
                                         Jármű típusa
                                     </label>
                                     <input type="text" id="ig-car-type" class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-800 dark:text-white rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200 mt-1">
                                 </div>
                                 <div>
                                     <label for="ig-location" class="text-sm font-medium flex items-center">
-                                        <svg class="w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg>
+                                            <i class="fa-solid fa-location-dot mr-2"></i>
                                         Helyszín
                                     </label>
                                     <input type="text" id="ig-location" class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-800 dark:text-white rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200 mt-1">
                                 </div>
                                 <div>
                                     <label for="ig-passengers" class="text-sm font-medium flex items-center">
-                                         <svg class="w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-4.663M5.125 3.375l2.281 4.563a2.625 2.625 0 005.188 0l2.28-4.563a2.625 2.625 0 00-5.188 0z" /></svg>
+                                            <i class="fa-solid fa-people-line mr-2"></i>
                                         Utasok száma
                                     </label>
                                     <input type="number" id="ig-passengers" class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-800 dark:text-white rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200 mt-1" min="1">
                                 </div>
                                 <div>
                                     <label for="ig-frsz" class="text-sm font-medium flex items-center">
-                                         <svg class="w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 013.75 9.375v-4.5zM3.75 14.625c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5a1.125 1.125 0 01-1.125-1.125v-4.5zM13.5 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5a1.125 1.125 0 01-1.125-1.125v-4.5zM13.5 14.625c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5a1.125 1.125 0 01-1.125-1.125v-4.5z" /></svg>
+                                            <i class="fa-solid fa-rug mr-2"></i>
                                         Rendszám
                                     </label>
                                     <input type="text" id="ig-frsz" class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-800 dark:text-white rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200 mt-1">
@@ -282,14 +291,19 @@
                                     <pre id="id-check-preview" class="text-gray-500 dark:text-gray-400 whitespace-pre-wrap text-sm"></pre>
                                 </div>
                                 <div class="border-t border-gray-300 dark:border-gray-700 pt-4">
-                                     <h4 class="font-semibold mb-2 text-gray-900 dark:text-white">Intézkedés vége</h4>
-                                     <pre id="id-check-end-preview" class="text-gray-500 dark:text-gray-400 whitespace-pre-wrap text-sm"></pre>
+                                    <h4 class="font-semibold mb-2 text-gray-900 dark:text-white">Intézkedés vége</h4>
+                                    <pre id="id-check-end-preview" class="text-gray-500 dark:text-gray-400 whitespace-pre-wrap text-sm"></pre>
+                                </div>
+                                <div id="gta-map-container" class="border-t border-gray-300 dark:border-gray-700 pt-4 mt-4">
+                                    <h4 class="font-semibold mb-2 text-gray-900 dark:text-white">Helyszín megadása térképről</h4>
+                                    <img id="gta-map" src="https://i.imgur.com/V3zX7e7.png" alt="GTA SA Térkép" class="w-full h-auto rounded-lg cursor-crosshair">
+                                    <p class="text-xs text-gray-500 dark:text-gray-400 mt-2">Kattints a térképre a helyszín kiválasztásához.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="flex flex-wrap gap-4 pt-6 border-t border-gray-300 dark:border-gray-700/50 mt-6">
-                            <button class="copy-btn" onclick="window.copyIdCheckStart(this)">Intézkedés másolása</button>
-                            <button class="copy-btn" onclick="window.copyIdCheckEnd(this)">Intézkedés vége másolása</button>
+                            <button class="copy-btn" onclick="window.copyIdCheckStart(this)"><i class="fa-solid fa-copy"></i> Intézkedés másolása</button>
+                            <button class="copy-btn" onclick="window.copyIdCheckEnd(this)"><i class="fa-solid fa-copy"></i> Intézkedés vége másolása</button>
                         </div>
                     </div>
                 </div>
@@ -317,40 +331,40 @@
                             </p>
                         </div>
                         <div class="flex flex-wrap gap-2">
-                            <button class="copy-btn text-xs" onclick="window.copyComplaintPart1(this)">1. Rész másolása</button>
-                            <button class="copy-btn text-xs" onclick="window.copyComplaintPart2(this)">2. Rész másolása</button>
+                            <button class="copy-btn text-xs" onclick="window.copyComplaintPart1(this)"><i class="fa-solid fa-copy"></i> 1. Rész másolása</button>
+                            <button class="copy-btn text-xs" onclick="window.copyComplaintPart2(this)"><i class="fa-solid fa-copy"></i> 2. Rész másolása</button>
                         </div>
                     </div>
                 </div>
                 
                 <div id="changelog-panel" class="content-panel space-y-6">
-                     <h1 class="text-2xl font-bold text-gray-900 dark:text-white">Changelog</h1>
-                     <div class="bg-white dark:bg-gray-800 p-6 rounded-lg text-gray-700 dark:text-gray-300 space-y-6">
-                        <div class="border-b border-gray-200 dark:border-gray-700 pb-4">
-                            <h2 class="text-lg font-semibold text-gray-900 dark:text-white">1.02-es frissítés</h2>
-                            <p class="text-sm text-gray-500 dark:text-gray-400">2025.07.30.</p>
-                            <ul class="list-disc list-inside space-y-2 text-sm mt-2">
-                                <li>Kódstruktúra teljes átalakítása a stabilitás és a hibák javítása érdekében.</li>
-                                <li>A fülek lenyitásával kapcsolatos hiba javítva.</li>
-                                <li>Az "Intézkedés indoklása" funkció javítása.</li>
-                                <li>A "11-10 Jelentés" funkció eltávolítva.</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h2 class="text-lg font-semibold text-gray-900 dark:text-white">1.01-es frissítés</h2>
-                            <p class="text-sm text-gray-500 dark:text-gray-400">2025.07.29.</p>
-                            <ul class="list-disc list-inside space-y-2 text-sm mt-2">
-                                <li>Titkosított jelszókezelés, új jelszavak hozzáadva.</li>
-                                <li>Ha nincs megadva egységszám, akkor az egységszámot igénylő rádiózásokat nem tudod kimásolni.</li>
-                                <li>Rádiózás fülön belül, Szolgálat, Megalakulás, Igazoltatás fülekhez leírás hozzáadva.</li>
-                                <li>Igazoltatás fülnél "Intézkedés vége" szöveg előnézete hozzáadva.</li>
-                                <li>Igazoltatás fülnél ikonok hozzáadva.</li>
-                                <li>Szolgálat fülnél Egységkeresés és LINCOLN egység kérelem szöveg elé "r" hozzáadva.</li>
-                                <li>Copy-Paste fül automatikus kinyitása hozzáadva.</li>
-                                <li>Egyéb hibajavítások.</li>
-                            </ul>
-                        </div>
-                     </div>
+                           <h1 class="text-2xl font-bold text-gray-900 dark:text-white">Changelog</h1>
+                           <div class="bg-white dark:bg-gray-800 p-6 rounded-lg text-gray-700 dark:text-gray-300 space-y-6">
+                                <div class="border-b border-gray-200 dark:border-gray-700 pb-4">
+                                    <h2 class="text-lg font-semibold text-gray-900 dark:text-white">1.02-es frissítés</h2>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400">2025.07.30.</p>
+                                    <ul class="list-disc list-inside space-y-2 text-sm mt-2">
+                                        <li>Kódstruktúra teljes átalakítása a stabilitás és a hibák javítása érdekében.</li>
+                                        <li>A fülek lenyitásával kapcsolatos hiba javítva.</li>
+                                        <li>Az "Intézkedés indoklása" funkció javítása.</li>
+                                        <li>A "11-10 Jelentés" funkció eltávolítva.</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h2 class="text-lg font-semibold text-gray-900 dark:text-white">1.01-es frissítés</h2>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400">2025.07.29.</p>
+                                    <ul class="list-disc list-inside space-y-2 text-sm mt-2">
+                                        <li>Titkosított jelszókezelés, új jelszavak hozzáadva.</li>
+                                        <li>Ha nincs megadva egységszám, akkor az egységszámot igénylő rádiózásokat nem tudod kimásolni.</li>
+                                        <li>Rádiózás fülön belül, Szolgálat, Megalakulás, Igazoltatás fülekhez leírás hozzáadva.</li>
+                                        <li>Igazoltatás fülnél "Intézkedés vége" szöveg előnézete hozzáadva.</li>
+                                        <li>Igazoltatás fülnél ikonok hozzáadva.</li>
+                                        <li>Szolgálat fülnél Egységkeresés és LINCOLN egység kérelem szöveg elé "r" hozzáadva.</li>
+                                        <li>Copy-Paste fül automatikus kinyitása hozzáadva.</li>
+                                        <li>Egyéb hibajavítások.</li>
+                                    </ul>
+                                </div>
+                           </div>
                 </div>
             </div>
         </main>
@@ -358,9 +372,8 @@
 
     <div id="password-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-10 p-4">
         <div class="bg-gray-800/50 backdrop-blur-sm rounded-lg shadow-xl p-8 w-full max-w-md space-y-4 text-center">
-            <div class="flex justify-center items-center gap-4 mb-4">
-                <img src="seemta_logo.png" alt="SeeMTA Logo" class="h-16 w-16">
-                <img src="laciisf_logo.png" alt="Laciisf Logo" class="h-16 w-16">
+            <div class="flex justify-center mb-4">
+                <img src="logo.png" alt="Segédprogram Logo" class="h-24 w-24 rounded-lg">
             </div>
             <h1 class="text-2xl font-bold text-white">SeeMTA NAV Segédprogram</h1>
             <h2 class="text-xl font-semibold text-gray-300">Jelszó Szükséges</h2>
@@ -381,15 +394,15 @@
         <div class="bg-white dark:bg-gray-800 rounded-lg shadow-xl p-8 w-full max-w-md space-y-4">
             <h2 class="text-2xl font-bold text-center text-gray-900 dark:text-white">Bejelentkezés</h2>
             <div>
-                <label for="user-name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Név</label>
+                <label for="user-name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"><i class="fa-solid fa-user mr-2"></i>Név</label>
                 <input type="text" id="user-name" class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-800 dark:text-white rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200">
             </div>
             <div>
-                <label for="user-badge" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Jelvényszám</label>
+                <label for="user-badge" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"><i class="fa-solid fa-id-badge mr-2"></i>Jelvényszám</label>
                 <input type="text" id="user-badge" class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-800 dark:text-white rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200">
             </div>
             <div>
-                <label for="user-rank" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Rendfokozat</label>
+                <label for="user-rank" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"><i class="fa-solid fa-ranking-star mr-2"></i>Rendfokozat</label>
                 <select id="user-rank" class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-800 dark:text-white rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200 rank-select"></select>
             </div>
             <p id="login-error" class="text-red-500 dark:text-red-400 text-sm text-center h-5"></p>
@@ -697,8 +710,8 @@
                 const capitalizeFirstLetter = (e) => {
                      const value = e.target.value;
                      if (value.length > 0) {
-                        e.target.value = value.charAt(0).toUpperCase() + value.slice(1);
-                     }
+                         e.target.value = value.charAt(0).toUpperCase() + value.slice(1);
+                    }
                 };
                 
                 dom.userNameInput.addEventListener('input', capitalizeFirstLetter);
@@ -715,7 +728,61 @@
 
                 dom.themeLightBtn.addEventListener('click', () => setTheme('light'));
                 dom.themeDarkBtn.addEventListener('click', () => setTheme('dark'));
+
+                // GTA Térkép eseményfigyelő hozzáadása
+                const gtaMap = document.getElementById('gta-map');
+                if (gtaMap) {
+                    gtaMap.addEventListener('click', handleMapClick);
+                }
             }
+
+            // A térkép helyszíneket tartalmazó "adatbázis"
+            // FONTOS: Ezek az adatok csak példák! Neked kell pontos koordinátákat megadni
+            // a használt GTA: SA térkép képéhez viszonyítva.
+            // A minX, minY a bal felső sarok, a maxX, maxY a jobb alsó sarok.
+            const mapLocations = [
+                { name: "Los Santos International Airport", minX: 300, minY: 750, maxX: 450, maxY: 900 },
+                { name: "Verona Beach", minX: 150, minY: 600, maxX: 250, maxY: 700 },
+                { name: "Downtown Los Santos", minX: 450, minY: 650, maxX: 600, maxY: 750 },
+                { name: "East Los Santos", minX: 650, minY: 600, maxX: 800, maxY: 750 },
+                { name: "Ganton", minX: 500, minY: 750, maxX: 600, maxY: 850 },
+                { name: "Whetstone", minX: 300, minY: 200, maxX: 450, maxY: 350 }, // Példa Whetstone-ra
+                { name: "Blueberry", minX: 500, minY: 150, maxX: 650, maxY: 300 }, // Példa Blueberry-re
+                { name: "Las Venturas", minX: 1100, minY: 100, maxX: 1400, maxY: 400 }, // Példa Las Venturasra
+                { name: "Tierra Robada", minX: 800, minY: 200, maxX: 1000, maxY: 400 }, // Példa Tierra Robadára
+                { name: "San Fierro", minX: 50, minY: 50, maxX: 250, maxY: 250 }, // Példa San Fierróra
+                // Itt folytasd a többi helyszín hozzáadását a térképed alapján
+            ];
+
+            function handleMapClick(event) {
+                const gtaMap = event.target;
+                const rect = gtaMap.getBoundingClientRect();
+                // Kattintás pozíciója az elemen belül
+                const clickX = event.clientX - rect.left;
+                const clickY = event.clientY - rect.top;
+
+                // Az eredeti kép méreteinek lekérése
+                const naturalWidth = gtaMap.naturalWidth || gtaMap.width;
+                const naturalHeight = gtaMap.naturalHeight || gtaMap.height;
+
+                // A kattintás koordinátáinak skálázása az eredeti kép méretéhez
+                const scaledX = (clickX / rect.width) * naturalWidth;
+                const scaledY = (clickY / rect.height) * naturalHeight;
+
+                let foundLocation = 'Ismeretlen Helyszín';
+
+                for (const loc of mapLocations) {
+                    if (scaledX >= loc.minX && scaledX <= loc.maxX &&
+                        scaledY >= loc.minY && scaledY <= loc.maxY) {
+                        foundLocation = loc.name;
+                        break;
+                    }
+                }
+                dom.idCheck.location.value = foundLocation;
+                updateAllPlaceholderTexts();
+                showNotification(`Helyszín beállítva: ${foundLocation}`, 'success');
+            }
+
 
             function updateUnitButtonState() {
                 const button = dom.unitButton;
@@ -837,6 +904,7 @@
                 }
             }
 
+            // Módosított copyToClipboard a button.innerHTML mentéséhez és visszaállításához
             function copyToClipboard(text, button) {
                 if (!text) return;
                 const textarea = document.createElement('textarea');
@@ -850,11 +918,11 @@
                     const successful = document.execCommand('copy');
                     if (successful) {
                         if (button) {
-                            const originalText = button.textContent;
-                            button.textContent = 'Másolva!';
+                            const originalContent = button.innerHTML; // Eredeti HTML tartalom mentése
+                            button.innerHTML = '<i class="fa-solid fa-copy"></i> Másolva!'; // Icon és text a Másolva üzenetben
                             button.disabled = true;
                             setTimeout(() => {
-                                button.textContent = originalText;
+                                button.innerHTML = originalContent; // Eredeti HTML tartalom visszaállítása
                                 button.disabled = false;
                             }, 2000);
                         }
@@ -989,14 +1057,14 @@
                         textParts.forEach((part, index) => {
                             const btn = document.createElement('button');
                             btn.className = 'copy-btn text-xs';
-                            btn.textContent = `${index + 1}. Rész másolása`;
+                            btn.innerHTML = `<i class="fa-solid fa-copy"></i> ${index + 1}. Rész másolása`; // Icon hozzáadva
                             btn.onclick = () => copyToClipboard(part, btn);
                             buttonContainer.appendChild(btn);
                         });
                     } else {
                         const btn = document.createElement('button');
                         btn.className = 'copy-btn';
-                        btn.textContent = 'Másolás';
+                        btn.innerHTML = '<i class="fa-solid fa-copy"></i> Másolás'; // Icon hozzáadva
                         btn.onclick = () => copyToClipboard(inf.description, btn);
                         buttonContainer.appendChild(btn);
                     }
